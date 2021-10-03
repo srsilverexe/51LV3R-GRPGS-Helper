@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Fonts/Damage.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Popus/UnvaliableFunc.gd" type="Script" id=2]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+margin_right = 663.0
+margin_bottom = 196.0
+window_title = "Vai com calma ai amigão"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -323.5
+margin_top = -90.0
+margin_right = 323.5
+margin_bottom = 62.0
+custom_fonts/font = ExtResource( 1 )
+text = "Essa funcionalidade ainda não esta disponível ):
+
+Talvez ela esteja disponível em breve se o 51LV3R não estiver com preguiça de terminá-la
+
+Fazer oque né :/"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="confirmed" from="." to="." method="_on_AcceptDialog_confirmed"]

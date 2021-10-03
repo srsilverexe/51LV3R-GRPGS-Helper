@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Popus/PopupShortcurts.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fonts/Damage.tres" type="DynamicFont" id=2]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+margin_right = 587.0
+margin_bottom = 161.0
+window_title = "Shortcurts"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -285.5
+margin_top = 8.0
+margin_right = 285.5
+margin_bottom = 129.0
+custom_constants/separation = 13
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+margin_left = 55.0
+margin_top = 31.0
+margin_right = 217.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 2 )
+text = "In Menu:
+Calculator (Shift + C)"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="HBoxContainer2"]
+margin_left = 230.0
+margin_right = 360.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 2 )
+text = "In Calculator:
+Damage (Shift + D)
+Status (Shift + S)
+Hurt (Shift + H)"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="HBoxContainer2"]
+margin_left = 373.0
+margin_right = 515.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 2 )
+text = "In damage:
+Fisico (Shift + F)
+Distancia (Shift + C)
+Especial (Shift + E)"
+align = 1
+valign = 1
+
+[connection signal="confirmed" from="." to="." method="_on_AcceptDialog_confirmed"]
