@@ -3,12 +3,12 @@ extends Tabs
 var bonus = false
 var onus = false
 
-var a = 0 #dano da arma
-var f = 0 #força do personagem
-var d = 0 #numero do dado
+var a = 0 #weapon damage
+var f = 0 #character strength
+var d = 0 #dice number
 var b = 0 #bonus
 var o = 0 #onus
-var x = 0 #dano
+var x = 0 #damage
 
 func _process(delta):
 	a = float($VBoxContainer/LineEdit.text)

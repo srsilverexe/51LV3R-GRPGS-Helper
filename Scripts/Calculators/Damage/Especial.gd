@@ -3,12 +3,12 @@ extends Tabs
 var bonus = false
 var onus = false
 
-var e = 0 #dano especial
-var s = 0 #sabedoria do personagem
-var d = 0 #numero do dado
+var e = 0 #special damage
+var s = 0 #character wisdom
+var d = 0 #dice number
 var b = 0 #bonus
 var o = 0 #onus
-var x = 0 #dano
+var x = 0 #damage
 
 # warning-ignore:unused_argument
 func _process(delta):
@@ -37,7 +37,7 @@ func _on_CheckButton_toggled(button_pressed):
 	else:
 		$VBoxContainer/LineEdit4.editable = false
 		bonus = false
-	pass # Replace with function body.
+	pass 
 
 func _on_CheckButton2_toggled(button_pressed):
 	if button_pressed == true:
@@ -46,4 +46,4 @@ func _on_CheckButton2_toggled(button_pressed):
 	else:
 		$VBoxContainer/LineEdit5.editable = false
 		onus = false
-	pass # Replace with function body.
+	pass 

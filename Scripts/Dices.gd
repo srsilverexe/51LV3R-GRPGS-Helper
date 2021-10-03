@@ -2,31 +2,31 @@ extends Control
 
 var dice = 0
 var rolls = 1
-var result = []
+var results = []
 var rng = RandomNumberGenerator.new()
 
 var customDice = false
-var bonus = false
-var onus = false
+var advantage = false
+var disadvantage = false
 
 
 func _process(delta):
-	bonus = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton.pressed
-	onus = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton2.pressed
+	advantage = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton.pressed
+	disadvantage = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton2.pressed
 	
-	if bonus:
+	if advantage:
 		$Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton2.disabled = true
-		onus = false
+		disadvantage = false
 	else:
 		$Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton2.disabled = false
 	
-	if onus:
+	if disadvantage:
 		$Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton.disabled = true
-		bonus = false
+		advantage = false
 	else:
 		$Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton.disabled = false
 	
-	if bonus or onus:
+	if advantage or disadvantage:
 		$Panel/VBoxContainer/HBoxContainer/VBoxContainer4/LineEdit.editable = false
 		$Panel/VBoxContainer/VBoxContainer3/Label2.text = String(rolls * 2) + "D" + String(dice)
 		rolls = 1
@@ -64,57 +64,57 @@ func _sync_vars():
 		dice = int($Panel/VBoxContainer/HBoxContainer/VBoxContainer/LineEdit.text)
 
 func _roll():
-	result.clear()
+	results.clear()
 	var temp_rolls = rolls
 	
-	if bonus or onus:
+	if advantage or disadvantage:
 		temp_rolls = rolls * 2
 		
 	for n in temp_rolls:
 		rng.randomize()
 		var a = rng.randi_range(1, dice)
-		result.insert(result.size(), a)
+		results.insert(results.size(), a)
 	
-	if bonus:
-		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(result.max())
-	elif onus:
-		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(result.min())
+	if advantage:
+		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(results.max())
+	elif disadvantage:
+		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(results.min())
 	else:
-		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(result)
+		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(results)
 	
 
 
 func _on_Button_button_down():
 	_roll()
-	pass # Replace with function body.
+	pass 
 
 
 func _on_ButtonAttack_button_down():
 	dice = 20
-	pass # Replace with function body.
+	pass 
 
 
 func _on_ButtonRun_button_down():
 	dice = 12
-	pass # Replace with function body.
+	pass 
 
 
 func _on_ButtonDef_button_down():
 	dice = 20
-	pass # Replace with function body.
+	pass 
 
 
 func _on_ButtonShow_button_down():
 	dice = 6
-	pass # Replace with function body.
+	pass 
 
 
 func _on_ButtonMagic_button_down():
 	dice = 8
-	pass # Replace with function body.
+	pass 
 
 
 func _on_TextureButton_button_down():
 	# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/Menu.tscn")
-	pass # Replace with function body.
+	pass 

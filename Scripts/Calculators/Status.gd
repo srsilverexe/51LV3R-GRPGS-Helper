@@ -1,9 +1,9 @@
 extends Tabs
 
-var v = 0 #vitalidade
-var f = 0 #força
+var v = 0 #vitality
+var f = 0 #strength
 var a = 0 #agilidade
-var s = 0 #sabedoria
+var s = 0 #wisdom
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
