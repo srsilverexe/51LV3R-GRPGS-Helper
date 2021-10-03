@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Fonts/Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Fonts/Menu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/JokesLabel.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Fonts/Damage.tres" type="DynamicFont" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -47,12 +48,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Label"]
+[node name="JokesLabel" type="RichTextLabel" parent="Panel/Label"]
 anchor_left = 0.875
 anchor_top = 1.0
 anchor_right = 0.875
 anchor_bottom = 1.0
-margin_left = -176.375
+margin_left = -853.375
 margin_top = -14.0
 margin_right = 129.625
 margin_bottom = 15.0
@@ -62,6 +63,7 @@ bbcode_text = "[color=purple][wave amp=50 freq=2] Respeitem Jorge 2 O rei dos es
 text = " Respeitem Jorge 2 O rei dos esqueletos "
 fit_content_height = true
 scroll_active = false
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
