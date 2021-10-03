@@ -36,10 +36,10 @@ __meta__ = {
 [node name="Damage" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 tab_close_display_policy = 1
 
 [node name="TabContainer" type="TabContainer" parent="TabContainer/Damage"]
@@ -58,10 +58,10 @@ __meta__ = {
 [node name="Fisico" type="Tabs" parent="TabContainer/Damage/TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 drag_to_rearrange_enabled = true
 script = ExtResource( 2 )
 
@@ -90,75 +90,75 @@ align = 1
 [node name="LineEdit" type="LineEdit" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
 margin_top = 34.0
 margin_right = 314.0
-margin_bottom = 72.0
+margin_bottom = 70.0
 rect_min_size = Vector2( 300, 25 )
 text = "0"
 align = 1
 
 [node name="Label2" type="Label" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 76.0
+margin_top = 74.0
 margin_right = 314.0
-margin_bottom = 106.0
+margin_bottom = 104.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "Qual e a força de quem esta atacando?"
 align = 1
 
 [node name="LineEdit2" type="LineEdit" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 110.0
+margin_top = 108.0
 margin_right = 314.0
-margin_bottom = 148.0
+margin_bottom = 144.0
 rect_min_size = Vector2( 300, 25 )
 text = "0"
 align = 1
 
 [node name="Label3" type="Label" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 152.0
+margin_top = 148.0
 margin_right = 314.0
-margin_bottom = 182.0
+margin_bottom = 178.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "Qual e o numero tirado no dado?"
 align = 1
 
 [node name="LineEdit3" type="LineEdit" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 186.0
+margin_top = 182.0
 margin_right = 314.0
-margin_bottom = 224.0
+margin_bottom = 218.0
 rect_min_size = Vector2( 300, 25 )
 text = "0"
 align = 1
 max_length = 2
 
 [node name="CheckButton" type="CheckButton" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 228.0
+margin_top = 222.0
 margin_right = 314.0
-margin_bottom = 268.0
+margin_bottom = 264.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "Possui bonus?"
 
 [node name="LineEdit4" type="LineEdit" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 272.0
+margin_top = 268.0
 margin_right = 314.0
-margin_bottom = 310.0
+margin_bottom = 304.0
 rect_min_size = Vector2( 300, 25 )
 text = "0"
 align = 1
 editable = false
 
 [node name="CheckButton2" type="CheckButton" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 314.0
+margin_top = 308.0
 margin_right = 314.0
-margin_bottom = 354.0
+margin_bottom = 350.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "Possui onus?"
 
 [node name="LineEdit5" type="LineEdit" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 358.0
+margin_top = 354.0
 margin_right = 314.0
-margin_bottom = 396.0
+margin_bottom = 390.0
 rect_min_size = Vector2( 300, 25 )
 text = "0"
 align = 1
@@ -168,18 +168,18 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 400.0
+margin_top = 394.0
 margin_right = 314.0
-margin_bottom = 430.0
+margin_bottom = 424.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "O dano e:"
 align = 1
 
 [node name="Label5" type="Label" parent="TabContainer/Damage/TabContainer/Fisico/VBoxContainer"]
-margin_top = 434.0
+margin_top = 428.0
 margin_right = 314.0
-margin_bottom = 464.0
+margin_bottom = 458.0
 rect_min_size = Vector2( 300, 30 )
 custom_fonts/font = ExtResource( 1 )
 text = "000"
@@ -189,10 +189,10 @@ align = 1
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 drag_to_rearrange_enabled = true
 script = ExtResource( 3 )
 
@@ -346,10 +346,10 @@ valign = 1
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 drag_to_rearrange_enabled = true
 script = ExtResource( 4 )
 
@@ -477,10 +477,10 @@ align = 1
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 script = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Status"]
@@ -646,10 +646,10 @@ valign = 1
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 36.0
-margin_right = -5.0
-margin_bottom = -5.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
 script = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Hurt"]

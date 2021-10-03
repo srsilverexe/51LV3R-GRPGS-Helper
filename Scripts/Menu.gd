@@ -13,7 +13,7 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scenes/SheetMaker.tscn")
+	get_tree().change_scene("res://Scenes/SheetManager.tscn")
 	pass 
 
 func _on_Button3_button_down():
