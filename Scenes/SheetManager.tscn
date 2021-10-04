@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/Fonts/Font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Darktheme.tres" type="Theme" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Scripts/SkillCheckBox.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/SheetMaker.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/SheetVisualizer.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/SheetManager.gd" type="Script" id=7]
+[ext_resource path="res://Assets/Icons/ReturnIcon.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 11
@@ -34,9 +36,16 @@ bg_color = Color( 1, 1, 1, 0 )
 size = 8
 font_data = ExtResource( 1 )
 
-[node name="Control" type="Control"]
+[sub_resource type="InputEventAction" id=7]
+action = "ui_esc"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[node name="SheetManager" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,7 +59,6 @@ __meta__ = {
 }
 
 [node name="Criador de fichas" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -956,6 +964,7 @@ margin_bottom = 62.0
 dialog_text = "Para poder salvar primeiro distribua todos os pontos e/ou pericias"
 
 [node name="Visualisador de ficha" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -2143,6 +2152,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureButton" type="TextureButton" parent="."]
+anchor_left = 0.942
+anchor_right = 1.0
+anchor_bottom = 0.098
+margin_left = 0.391968
+margin_bottom = 0.199997
+hint_tooltip = "Voltar para o menu
+
+Atalho: Esc"
+shortcut_in_tooltip = false
+shortcut = SubResource( 8 )
+texture_normal = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="tab_selected" from="TabContainer" to="TabContainer/Visualisador de ficha" method="_on_TabContainer_tab_selected"]
 [connection signal="button_down" from="TabContainer/Criador de fichas/HBoxContainer/VBoxContainer/HBoxContainer/ButtonRemoveLevel" to="TabContainer/Criador de fichas" method="_on_ButtonRemoveLevel_button_down"]
 [connection signal="button_down" from="TabContainer/Criador de fichas/HBoxContainer/VBoxContainer/HBoxContainer/ButtonAddLevel" to="TabContainer/Criador de fichas" method="_on_ButtonAddLevel_button_down"]
@@ -2186,3 +2212,4 @@ __meta__ = {
 [connection signal="confirmed" from="TabContainer/Visualisador de ficha/RemoveManaPopup" to="TabContainer/Visualisador de ficha" method="_on_RemoveManaPopup_confirmed"]
 [connection signal="confirmed" from="TabContainer/Visualisador de ficha/AddMoneyPopup" to="TabContainer/Visualisador de ficha" method="_on_AddMoneyPopup_confirmed"]
 [connection signal="confirmed" from="TabContainer/Visualisador de ficha/RemoveMoneyPopup" to="TabContainer/Visualisador de ficha" method="_on_RemoveMoneyPopup_confirmed"]
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]

@@ -23,8 +23,8 @@
 - [x] Make a compilation of calculators
 - [x] Make a dice roller
 - [x] Make a sheet generator
+- [X] Make a sheet visualizer
 - [ ] Translate to English
-- [ ] Make a spreadsheet viewer
 - [ ] Make an inventory viewer and editor
 - [ ] Make a grimory viewer
 - [ ] Make a npc/enemies generator
