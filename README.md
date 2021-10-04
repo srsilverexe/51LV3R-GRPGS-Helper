@@ -15,11 +15,15 @@
 ## Why I need the 5GH?
 
 > The 5GC is a simple rpg system but have complex things and complex calculus, thinking about it I the 5GC developer, decided to create a tool to help players and GMs.
+>
+> Ex: Melee damage: x=a+1/4 f×1/4 d
 
 ## Us objectives
 
+- [x] Make a compilation of calculators
+- [x] Make a dice roller
+- [x] Make a sheet generator
 - [ ] Translate to English
-- [x] Make a spreadsheet generator
 - [ ] Make a spreadsheet viewer
 - [ ] Make an inventory viewer and editor
 - [ ] Make a grimory viewer
