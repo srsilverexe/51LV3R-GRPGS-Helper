@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Fonts/Damage.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/Popus/UnvaliableFunc.gd" type="Script" id=2]
 
 [node name="AcceptDialog" type="AcceptDialog"]

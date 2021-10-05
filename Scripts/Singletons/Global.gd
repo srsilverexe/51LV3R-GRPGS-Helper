@@ -4,6 +4,7 @@ var shortcurts = preload("res://Scenes/Popups/PopupShortcurts.tscn")
 var noFunc = preload("res://Scenes/Popups/UnvaliableFunc.tscn")
 
 var curentSheet = null
+var curentSheetPath = null
 
 func _init():
 	var dir = Directory.new()

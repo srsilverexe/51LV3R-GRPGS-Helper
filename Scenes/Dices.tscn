@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Fonts/Damage.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/Normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/Dices.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Icons/ReturnIcon.png" type="Texture" id=3]
 

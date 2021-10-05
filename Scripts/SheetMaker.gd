@@ -3,7 +3,18 @@ extends Tabs
 var temp_sheet = {
 	#Base
 	"name": "Joe Doe",
+	"race": "Nenhuma",
+	"class": "Nenhuma",
+	#Status
 	"level": 1,
+	"life": 0,
+	"stamina": 0,
+	"mana_vital_energy": 0,
+	"money": 0,
+	"max_life": 0,
+	"max_stamina": 0,
+	"max_mana_vital_energy": 0,
+	#Points
 	"strength": 5,
 	"velocity": 5,
 	"intelligence": 5,
@@ -44,6 +55,8 @@ var temp_sheet = {
 	"survival": false,
 	"tracking": false
 }
+
+var tempSheetPath = null
 
 var firstGoal = false
 var noSkills = false
@@ -122,6 +135,8 @@ func _sync_labels():
 
 func _sync_vars():
 	temp_sheet["name"] = String($HBoxContainer/VBoxContainer/LineEdit.text)
+	temp_sheet["race"] = String($HBoxContainer/VBoxContainer/LineEdit2.text)
+	temp_sheet["class"] = String($HBoxContainer/VBoxContainer/LineEdit3.text)
 	temp_sheet["cold_steel"] = bool($HBoxContainer/GridContainer/CheckBox.pressed)
 	temp_sheet["handguns"] = bool($HBoxContainer/GridContainer/CheckBox2.pressed)
 	temp_sheet["medium_weapons"] = bool($HBoxContainer/GridContainer/CheckBox3.pressed)
@@ -156,6 +171,8 @@ func _sync_vars():
 
 func _sync_lines():
 	$HBoxContainer/VBoxContainer/LineEdit.text = String(temp_sheet["name"])
+	$HBoxContainer/VBoxContainer/LineEdit2.text = String(temp_sheet["race"])
+	$HBoxContainer/VBoxContainer/LineEdit2.text = String(temp_sheet["class"])
 	$HBoxContainer/GridContainer/CheckBox.pressed = bool(temp_sheet["cold_steel"])
 	$HBoxContainer/GridContainer/CheckBox2.pressed = bool(temp_sheet["handguns"])
 	$HBoxContainer/GridContainer/CheckBox3.pressed = bool(temp_sheet["medium_weapons"])
@@ -190,9 +207,16 @@ func _sync_lines():
 
 func _on_Button_button_down():
 	_sync_vars()
-	$FileDialog2.popup_centered()
-	$FileDialog2.popup()
-	pass 
+	
+	if avaliable_points == 0 and avaliable_skills == 0: 
+		if tempSheetPath != null:
+			SaveSistem.save_data(tempSheetPath, temp_sheet)
+		else:
+			$FileDialog2.popup_centered()
+			$FileDialog2.popup()
+	else:
+		$AcceptDialog.popup_centered()
+		$AcceptDialog.pop
 
 
 func _on_Button2_button_down():
@@ -296,11 +320,13 @@ func _on_ButtonAddSanity_button_down():
 
 # warning-ignore:shadowed_variable
 func _on_FileDialog_file_selected(path):
+	tempSheetPath = path
 	temp_sheet = SaveSistem.load_data(path)
 	_sync_lines()
 	pass 
 
 func _on_FileDialog2_file_selected(path):
+	tempSheetPath = path
 	SaveSistem.save_data(path, temp_sheet)
 	pass 
 
@@ -319,3 +345,4 @@ func _on_FileDialog_popup_hide():
 func _on_FileDialog2_popup_hide():
 	get_tree().paused = false
 	pass 
+

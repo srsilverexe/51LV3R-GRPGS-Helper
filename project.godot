@@ -28,7 +28,8 @@ SaveSistem="*res://Scripts/Singletons/Save Sistem.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/resizable=false
+window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
 [gui]
