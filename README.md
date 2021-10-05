@@ -10,7 +10,7 @@
 
 ## What is 51LV3R GRPGS Core?
 
-> 5GC is a GRPGS(Generic Rpg System), the 5GC is a free and indie rpg system.
+> 5GC is a GRPGS(Generic Rpg System), the 5GC is a free and indie rpg system, but currently has in development phase, actual version is alpha 0.1.3.
 
 ## Why I need the 5GH?
 
