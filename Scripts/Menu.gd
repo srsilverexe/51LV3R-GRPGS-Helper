@@ -22,7 +22,7 @@ func _on_Button3_button_down():
 	pass 
 
 func _on_ButtonConfigs_button_down():
-	_nofunc()
+	get_tree().change_scene("res://Scenes/Settings.tscn")
 	pass 
 
 func _on_ButtonQuit_button_down():

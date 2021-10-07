@@ -85,6 +85,16 @@ short_especial={
  ]
 }
 
+[locale]
+
+fallback="pt_BR"
+translations=PoolStringArray( "res://Assets/Translation.en.translation", "res://Assets/Translation.pt_BR.translation" )
+locale_filter=[ 0, [ "en", "pt_BR" ] ]
+
+[logging]
+
+file_logging/log_path="user://logs/5GH.log"
+
 [physics]
 
 common/enable_pause_aware_picking=true

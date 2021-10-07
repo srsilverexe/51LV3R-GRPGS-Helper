@@ -1,0 +1,106 @@
+keys,pt_BR,en
+MENU_QUESTION,VocE precisa de ajuda com o'que?,What do you need help with?
+CALCULATORS,Calculadoras,Calculators
+SHEET_MANAGER,Gerenciador de Fichas,Sheet Manager
+DICES,Dados,Dices
+SETTINGS,Configuracoes,Settings
+EXIT,Sair,Exit
+MENU_JOKE_1,Respeitem Jorge 2 O rei dos esqueletos,Respect Jorge 2 The King of Skeletons
+MENU_JOKE_2,Que Zamire nos proteja,Zamire protect us
+MENU_JOKE_3,"Ola , eu sou o Bibliotecario, em que posso lhe ajudar?","Hi, I'm Bibliotecario, how can I help you?"
+MENU_JOKE_4,Vamos matar!!!!!!! (com um forte sotaque russo),Let's kill!!!!!!! (with a strong Russian accent)
+MENU_JOKE_5,"Lute como nunca, ganhe como sempre","Fight like never, win like ever"
+MENU_JOKE_6,"A morte e igual a vida, so que ao contrario","Death equals life, only the opposite"
+MENU_JOKE_7,"A vitoria e uma duvida, e a derrota e uma certeza","Victory is a doubt, and defeat is a certainty"
+DAMAGE,Dano,Damage
+STATUS,Status,Status
+HURT_LIMITS,Limite de ferimentos,Hurt Limits
+MELEE,Fisico,Melee
+RANGE,Distancia,Range
+SPECIAL,Especial,Special
+WEAPON_DAMAGE,Qual e o dano da arma?,What is the weapon's damage?
+ATTACKING_STRENGTH,Qual e a forca de quem esta atacando?,What is the strength of who is attacking?
+DICE_NUMBER,Qual e o numero tirado no dado?,What is the number taken on the dice?
+HAVE_BONUSES,Possui bonus?,Have bonuses?
+HAVE_ONUS,Possui onus?,Have onus?
+DAMAGE_IS,O dano e:,The damage is:
+DAMAGE_PROJECTILE,Qual e o dano base do projetil?,What is the base damage of the projectile?
+SPECIAL_DAMAGE,Qual e o dano especial?,What is the special damage?
+WISDOM_ATTACKING,Qual e a sabedoria de quem esta atacando?,What is the wisdom of who is attacking?
+VITALITY,Vitalidade,Vitality
+STRENGTH,Forca,Strength
+VELOCITY,Velocidade/Agilidade,Speed/Agility
+WISDOM,Sabedoria,Wisdom
+LIFE,Vida:,Life:
+STAMINA,Stamina:,Stamina:
+MANA,Mana/Energia Vital:,Mana/Vital Energy:
+HEAD,Cabeca:,Head:
+BODY,Tronco:,Body:
+ARMS,Bracos:,Arms:
+LEGS,Pernas:,Legs:
+ATTACK_DICE,Atacar/Mirar (d20),Attack/Aim (d20)
+MOVEMENT_DICE,Correr/Posicionar/Esquivar (d12),Run/Place/Dodge (d12)
+DEFEND_DICE,Defender/Resistir (d20),Defend/Resist (d20)
+PERCEPTION_DICE,Percepcao/Analisar/Procurar (d6),Perception/Analyze/Search (d6)
+SPECIAL_DICE,Magias/Ativas/Acoes Especiais (d8),Spells/Active/Special Actions (d8)
+CUSTOMIZED,Customizado,Customized
+MAXIMUM_VALUE,"Valor maximo do dado, ex:20","Maximum value of the dice, ex?20"
+AMOUNT,Quantidade,Amount
+ADVANTAGE,Vantagem,Advantage
+DISADVANTAGE,Desvantagem,Disadvantage
+ROLL_DICE,Jogar dado(s),Roll dice(s)
+SELECTED_DICE,Dado selecionado:,Selected dice:
+RESULT,Resultado:,Result: 
+SHEET_MAKER,Criador de fichas,Sheet Maker
+NAME,Nome,Name
+RACE,Raca,Race
+CLASS,Classe,Class
+LEVEL,Level,Level
+INTELLIGENCE,Inteligencia,Intelligence
+CHARISMA,Carisma,Charisma
+SANITY,Sanidade,Sanity
+COLD_STEEL,Armas Brancas,Cold Steel
+MEDIUM_WEAPONS,Armas M?dias,Medium Weapons
+HEAVY_WEAPONS,Armas Pesadas,Heavy Weapons
+HANDGUNS,Armas Curtas,Handguns
+LONG_WEAPONS,Armas Longas,Long Weapons
+BREAK-INS,Arrombamentos,Break-ins
+MARTIAL_ARTS,Artes Marciais,Martial Arts
+ATTENTION/NOTICE,Atencao/Notar,Attention/Notice
+FIGHT,Briga,Fight
+CREDIBILITY,Credibilidade,Credibility
+PERSONAL_CARES,Cuidados Pessoais,Personal Cares
+DISGUISE,Disfarce,Disguise
+EDUCATION_AND_GENERAL_CULTURE,Educacao e Cultura Geral,Education and General Culture
+HIDE/EVADE,Esconder/Evadir,Hide/Evade
+DODGE/ESCAPE,Esquivar/Escapar,Dodge/Escape
+FALSIFICATION,Falsifica?ao,Falsification
+STEALTH,Furtividade,Stealth
+QUESTIONING,Interrogatorio,Questioning
+BULLYING,Intimidacao ,Bullying
+LEADERSHIP,Lideranca ,Leadership
+MEDICINES,Medicamentos ,Medicines
+MEDICINE,Medicina ,Medicine
+NEGOTIATE,Negociar ,Negotiate
+PERCEPTION,Percepcao ,Perception
+PERSUASION_AND_LABIA,Persuasao e Labia,Persuasion and Labia
+FIRST_AID,Primeiros Socorros,First aid
+TORTURE/DRUG_RESISTANCE,Resistencia Tortura/Drogas,Torture/Drug Resistance
+RESISTANCE,Resistencia,Resistance
+SEDUCTION,Seducao,Seduction
+SURVIVAL,Sobrevivencia,Survival
+TRACKING,Rastreamento,Tracking
+POINTS_AVAILABLE,Pontos Disponiveis,Points Available
+AVAILABLE_SKILLS,Pericias Disponiveis,Available Skills
+SAVE,Salvar,Save
+LOAD,Carregar,Load
+SHEET_VISUALIZER,Visualisador de Ficha,Sheet Visualizer
+BASICS_INFORMATIONS,Informa??es Basicas,Basics Informations
+POINTS,Pontos,Points
+SKILLS,Pericias,Skills
+MONEY,Dinheiro,Money
+TOOLTIP_CALCULATORS,Repositorio de calculadoras para o mestre,Repository of calculators for the GM's
+TOOLTIP_SHEET_MANAGER,Repositorio de gerenciadores de ficha,Repository of sheet managers
+TOOLTIP_DICES,Emulador de dados,Dice emulator
+TOOLTIP_SETINGS,Editor de configuracoes do programa,Program Settings Editor
+TOOLTIP_EXIT,Fechar o programa,Close the program
