@@ -1,5 +1,5 @@
 keys,pt_BR,en
-MENU_QUESTION,VocE precisa de ajuda com o'que?,What do you need help with?
+MENU_QUESTION,Voce precisa de ajuda com o'que?,What do you need help with?
 CALCULATORS,Calculadoras,Calculators
 SHEET_MANAGER,Gerenciador de Fichas,Sheet Manager
 DICES,Dados,Dices
@@ -60,7 +60,7 @@ INTELLIGENCE,Inteligencia,Intelligence
 CHARISMA,Carisma,Charisma
 SANITY,Sanidade,Sanity
 COLD_STEEL,Armas Brancas,Cold Steel
-MEDIUM_WEAPONS,Armas M?dias,Medium Weapons
+MEDIUM_WEAPONS,Armas Medias,Medium Weapons
 HEAVY_WEAPONS,Armas Pesadas,Heavy Weapons
 HANDGUNS,Armas Curtas,Handguns
 LONG_WEAPONS,Armas Longas,Long Weapons
@@ -74,7 +74,7 @@ DISGUISE,Disfarce,Disguise
 EDUCATION_AND_GENERAL_CULTURE,Educacao e Cultura Geral,Education and General Culture
 HIDE/EVADE,Esconder/Evadir,Hide/Evade
 DODGE/ESCAPE,Esquivar/Escapar,Dodge/Escape
-FALSIFICATION,Falsifica?ao,Falsification
+FALSIFICATION,Falsificacao,Falsification
 STEALTH,Furtividade,Stealth
 QUESTIONING,Interrogatorio,Questioning
 BULLYING,Intimidacao ,Bullying
@@ -95,10 +95,20 @@ AVAILABLE_SKILLS,Pericias Disponiveis,Available Skills
 SAVE,Salvar,Save
 LOAD,Carregar,Load
 SHEET_VISUALIZER,Visualisador de Ficha,Sheet Visualizer
-BASICS_INFORMATIONS,Informa??es Basicas,Basics Informations
+BASICS_INFORMATIONS,Informacoes Basicas,Basics Informations
 POINTS,Pontos,Points
 SKILLS,Pericias,Skills
 MONEY,Dinheiro,Money
+INDEX,Index,Index
+BASE_DAMAGE,Dano Base,Base Damage
+BASE_DEFENSE,Defesa Base,Base Defense
+REQUIREMENTS,Requisitos,Requirements
+DURABILITY,Durabilidade,Durability
+RARITY,Raridade,Rarity
+ABILITY,Habilidade,Ability
+ADD,Adicionar,Add
+REMOVE,Remover,Remove
+EDIT,Editar,Edit
 TOOLTIP_CALCULATORS,Repositorio de calculadoras para o mestre,Repository of calculators for the GM's
 TOOLTIP_SHEET_MANAGER,Repositorio de gerenciadores de ficha,Repository of sheet managers
 TOOLTIP_DICES,Emulador de dados,Dice emulator

@@ -34,7 +34,8 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom="res://Darktheme.tres"
+theme/custom="res://DarkTheme.tres"
+theme/custom_font="res://Assets/Fonts/Normal.tres"
 timers/tooltip_delay_sec=0.2
 
 [input]
@@ -88,7 +89,7 @@ short_especial={
 [locale]
 
 fallback="pt_BR"
-translations=PoolStringArray( "res://Assets/Translation.en.translation", "res://Assets/Translation.pt_BR.translation" )
+translations=PoolStringArray( "res://Translations/Translation.en.translation", "res://Translations/Translation.pt_BR.translation" )
 locale_filter=[ 0, [ "en", "pt_BR" ] ]
 
 [logging]

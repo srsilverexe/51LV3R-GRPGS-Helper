@@ -4,7 +4,6 @@ var setings = {
 	"Linguage": "en"
 }
 
-
 var shortcurts = preload("res://Scenes/Popups/PopupShortcurts.tscn")
 var noFunc = preload("res://Scenes/Popups/UnvaliableFunc.tscn")
 
