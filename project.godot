@@ -34,7 +34,8 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom="res://Darktheme.tres"
+theme/custom="res://DarkTheme.tres"
+theme/custom_font="res://Assets/Fonts/Normal.tres"
 timers/tooltip_delay_sec=0.2
 
 [input]
@@ -84,6 +85,16 @@ short_especial={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[locale]
+
+fallback="pt_BR"
+translations=PoolStringArray( "res://Translations/Translation.en.translation", "res://Translations/Translation.pt_BR.translation" )
+locale_filter=[ 0, [ "en", "pt_BR" ] ]
+
+[logging]
+
+file_logging/log_path="user://logs/5GH.log"
 
 [physics]
 

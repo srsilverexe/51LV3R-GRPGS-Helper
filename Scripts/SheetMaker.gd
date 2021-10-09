@@ -53,7 +53,16 @@ var temp_sheet = {
 	"resistance": false,
 	"seduction": false,
 	"survival": false,
-	"tracking": false
+	"tracking": false,
+	#Inventory
+	"index": [],
+	"names": [],
+	"base_damage": [],
+	"base_defense": [],
+	"requirements": [],
+	"durability": [],
+	"rarity": [],
+	"ability": []
 }
 
 var tempSheetPath = null
@@ -216,7 +225,7 @@ func _on_Button_button_down():
 			$FileDialog2.popup()
 	else:
 		$AcceptDialog.popup_centered()
-		$AcceptDialog.pop
+		$AcceptDialog.popup()
 
 
 func _on_Button2_button_down():
