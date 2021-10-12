@@ -70,7 +70,7 @@ var tempSheetPath = null
 var firstGoal = false
 var noSkills = false
 
-var avaliable_points = 30
+var avaliable_points = 60
 var avaliable_skills = 5
 var last_goal = 1
 var goals = 0
@@ -319,12 +319,18 @@ func _on_ButtonRemoveSanity_button_down():
 	if temp_sheet["sanity"] > 0:
 		temp_sheet["sanity"] -= 1
 		avaliable_points += 1
+	elif temp_sheet["sanity"] <= 0:
+		temp_sheet["sanity"] -= 1
+		avaliable_points -= 1
 	pass 
 
 func _on_ButtonAddSanity_button_down():
-	if avaliable_points > 0:
+	if avaliable_points > 0 and temp_sheet["sanity"] >= 0:
 		temp_sheet["sanity"] += 1
 		avaliable_points -= 1
+	elif temp_sheet["sanity"] < 0:
+		temp_sheet["sanity"] += 1
+		avaliable_points += 1
 	pass 
 
 # warning-ignore:shadowed_variable
