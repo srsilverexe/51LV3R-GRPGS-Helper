@@ -37,7 +37,7 @@ font_data = ExtResource( 1 )
 bg_color = Color( 1, 1, 1, 0 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 8
+size = 7
 extra_spacing_top = 3
 extra_spacing_bottom = 3
 font_data = ExtResource( 1 )
@@ -170,9 +170,10 @@ margin_top = 178.0
 margin_right = 200.0
 margin_bottom = 204.0
 custom_constants/separation = 0
-alignment = 1
+alignment = 2
 
 [node name="ButtonRemoveLevel" type="Button" parent="TabContainer/SHEET_MAKER/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
 margin_right = 30.0
 margin_bottom = 26.0
 rect_min_size = Vector2( 30, 0 )
@@ -992,7 +993,7 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
-margin_top = 50.0
+margin_top = 39.0
 margin_right = -10.0
 margin_bottom = -10.0
 script = ExtResource( 6 )
@@ -1002,27 +1003,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -492.0
-margin_top = -279.5
-margin_right = 492.0
-margin_bottom = 279.5
+margin_left = -504.0
+margin_top = -264.0
+margin_right = 504.0
+margin_bottom = 264.0
 custom_constants/separation = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_right = 840.0
-margin_bottom = 559.0
-custom_constants/separation = 20
+margin_right = 864.0
+margin_bottom = 528.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_right = 840.0
-margin_bottom = 290.0
+margin_right = 864.0
+margin_bottom = 354.0
 custom_constants/separation = 40
 alignment = 1
 __meta__ = {
@@ -1030,9 +1030,9 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 108.0
-margin_right = 260.0
-margin_bottom = 290.0
+margin_left = 120.0
+margin_right = 272.0
+margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_right = 152.0
@@ -1122,14 +1122,14 @@ align = 1
 valign = 1
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 300.0
-margin_right = 304.0
-margin_bottom = 290.0
+margin_left = 312.0
+margin_right = 316.0
+margin_bottom = 354.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 344.0
-margin_right = 482.0
-margin_bottom = 290.0
+margin_left = 356.0
+margin_right = 494.0
+margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 margin_right = 138.0
@@ -1169,21 +1169,21 @@ valign = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
 margin_top = 104.0
 margin_right = 138.0
-margin_bottom = 128.0
+margin_bottom = 144.0
 custom_constants/separation = 9
 alignment = 1
 
 [node name="ButtonRemoveLife" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_right = 30.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "-"
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_left = 39.0
-margin_top = 1.0
+margin_top = 9.0
 margin_right = 99.0
-margin_bottom = 23.0
+margin_bottom = 31.0
 rect_min_size = Vector2( 60, 0 )
 custom_fonts/font = SubResource( 5 )
 text = "000/000"
@@ -1193,37 +1193,37 @@ valign = 1
 [node name="ButtonAddLife" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 margin_left = 108.0
 margin_right = 138.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "+"
 
 [node name="Label5" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 132.0
+margin_top = 148.0
 margin_right = 138.0
-margin_bottom = 154.0
+margin_bottom = 170.0
 custom_fonts/font = SubResource( 5 )
 text = "STAMINA"
 align = 1
 valign = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 158.0
+margin_top = 174.0
 margin_right = 138.0
-margin_bottom = 182.0
+margin_bottom = 214.0
 custom_constants/separation = 9
 alignment = 1
 
 [node name="ButtonRemoveStamina" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
 margin_right = 30.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "-"
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
 margin_left = 39.0
-margin_top = 1.0
+margin_top = 9.0
 margin_right = 99.0
-margin_bottom = 23.0
+margin_bottom = 31.0
 rect_min_size = Vector2( 60, 0 )
 custom_fonts/font = SubResource( 5 )
 text = "000/000"
@@ -1233,37 +1233,37 @@ valign = 1
 [node name="ButtonAddStamina" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
 margin_left = 108.0
 margin_right = 138.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "+"
 
 [node name="Label6" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 186.0
+margin_top = 218.0
 margin_right = 138.0
-margin_bottom = 208.0
+margin_bottom = 240.0
 custom_fonts/font = SubResource( 5 )
 text = "MANA"
 align = 1
 valign = 1
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 212.0
+margin_top = 244.0
 margin_right = 138.0
-margin_bottom = 236.0
+margin_bottom = 284.0
 custom_constants/separation = 9
 alignment = 1
 
 [node name="ButtonRemoveMana" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
 margin_right = 30.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "-"
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
 margin_left = 39.0
-margin_top = 1.0
+margin_top = 9.0
 margin_right = 99.0
-margin_bottom = 23.0
+margin_bottom = 31.0
 rect_min_size = Vector2( 60, 0 )
 custom_fonts/font = SubResource( 5 )
 text = "000/000"
@@ -1273,23 +1273,23 @@ valign = 1
 [node name="ButtonAddMana" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
 margin_left = 108.0
 margin_right = 138.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "+"
 
 [node name="Label7" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 240.0
+margin_top = 288.0
 margin_right = 138.0
-margin_bottom = 262.0
+margin_bottom = 310.0
 custom_fonts/font = SubResource( 5 )
 text = "MONEY"
 align = 1
 valign = 1
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 266.0
+margin_top = 314.0
 margin_right = 138.0
-margin_bottom = 290.0
+margin_bottom = 354.0
 custom_constants/separation = 9
 alignment = 1
 __meta__ = {
@@ -1298,15 +1298,15 @@ __meta__ = {
 
 [node name="ButtonRemoveMoney" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
 margin_right = 30.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "-"
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
 margin_left = 39.0
-margin_top = 1.0
+margin_top = 9.0
 margin_right = 99.0
-margin_bottom = 23.0
+margin_bottom = 31.0
 rect_min_size = Vector2( 60, 0 )
 custom_fonts/font = SubResource( 5 )
 text = "00000"
@@ -1316,19 +1316,19 @@ valign = 1
 [node name="ButtonAddMoney" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
 margin_left = 108.0
 margin_right = 138.0
-margin_bottom = 24.0
+margin_bottom = 40.0
 rect_min_size = Vector2( 30, 0 )
 text = "+"
 
 [node name="VSeparator2" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 522.0
-margin_right = 526.0
-margin_bottom = 290.0
+margin_left = 534.0
+margin_right = 538.0
+margin_bottom = 354.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 566.0
-margin_right = 731.0
-margin_bottom = 290.0
+margin_left = 578.0
+margin_right = 743.0
+margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 margin_right = 165.0
@@ -1513,21 +1513,21 @@ align = 1
 valign = 1
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_top = 310.0
-margin_right = 840.0
-margin_bottom = 314.0
+margin_top = 358.0
+margin_right = 864.0
+margin_bottom = 362.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_top = 334.0
-margin_right = 840.0
-margin_bottom = 559.0
+margin_top = 366.0
+margin_right = 864.0
+margin_bottom = 528.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_right = 840.0
+margin_right = 864.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 5 )
 text = "SKILLS"
@@ -1536,13 +1536,13 @@ valign = 1
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_top = 26.0
-margin_right = 840.0
-margin_bottom = 225.0
-columns = 5
+margin_right = 864.0
+margin_bottom = 162.0
+columns = 7
 
 [node name="CheckBox" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_right = 130.0
-margin_bottom = 25.0
+margin_right = 115.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1553,9 +1553,9 @@ text = "COLD_STEEL"
 align = 1
 
 [node name="CheckBox2" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_right = 318.0
-margin_bottom = 25.0
+margin_left = 119.0
+margin_right = 215.0
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( -293.796, 285.048 )
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
@@ -1566,9 +1566,9 @@ text = "HANDGUNS"
 align = 1
 
 [node name="CheckBox3" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_right = 544.0
-margin_bottom = 25.0
+margin_left = 219.0
+margin_right = 332.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1578,9 +1578,9 @@ text = "MEDIUM_WEAPONS"
 align = 1
 
 [node name="CheckBox4" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_right = 674.0
-margin_bottom = 25.0
+margin_left = 336.0
+margin_right = 467.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1590,9 +1590,9 @@ text = "LONG_WEAPONS"
 align = 1
 
 [node name="CheckBox5" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_right = 840.0
-margin_bottom = 25.0
+margin_left = 471.0
+margin_right = 579.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1602,9 +1602,9 @@ text = "HEAVY_WEAPONS"
 align = 1
 
 [node name="CheckBox6" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 29.0
-margin_right = 130.0
-margin_bottom = 54.0
+margin_left = 583.0
+margin_right = 759.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1614,10 +1614,9 @@ text = "BREAK-INS"
 align = 1
 
 [node name="CheckBox7" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_top = 29.0
-margin_right = 318.0
-margin_bottom = 54.0
+margin_left = 763.0
+margin_right = 864.0
+margin_bottom = 24.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1627,10 +1626,9 @@ text = "MARTIAL_ARTS"
 align = 1
 
 [node name="CheckBox8" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_top = 29.0
-margin_right = 544.0
-margin_bottom = 54.0
+margin_top = 28.0
+margin_right = 115.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1640,10 +1638,10 @@ text = "ATTENTION/NOTICE"
 align = 1
 
 [node name="CheckBox9" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_top = 29.0
-margin_right = 674.0
-margin_bottom = 54.0
+margin_left = 119.0
+margin_top = 28.0
+margin_right = 215.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1653,10 +1651,10 @@ text = "FIGHT"
 align = 1
 
 [node name="CheckBox10" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_top = 29.0
-margin_right = 840.0
-margin_bottom = 54.0
+margin_left = 219.0
+margin_top = 28.0
+margin_right = 332.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1666,9 +1664,10 @@ text = "CREDIBILITY"
 align = 1
 
 [node name="CheckBox11" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 58.0
-margin_right = 130.0
-margin_bottom = 83.0
+margin_left = 336.0
+margin_top = 28.0
+margin_right = 467.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1678,10 +1677,10 @@ text = "PERSONAL_CARES"
 align = 1
 
 [node name="CheckBox12" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_top = 58.0
-margin_right = 318.0
-margin_bottom = 83.0
+margin_left = 471.0
+margin_top = 28.0
+margin_right = 579.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1691,10 +1690,10 @@ text = "DISGUISE"
 align = 1
 
 [node name="CheckBox13" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_top = 58.0
-margin_right = 544.0
-margin_bottom = 83.0
+margin_left = 583.0
+margin_top = 28.0
+margin_right = 759.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1704,10 +1703,10 @@ text = "EDUCATION_AND_GENERAL_CULTURE"
 align = 1
 
 [node name="CheckBox14" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_top = 58.0
-margin_right = 674.0
-margin_bottom = 83.0
+margin_left = 763.0
+margin_top = 28.0
+margin_right = 864.0
+margin_bottom = 52.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1717,10 +1716,9 @@ text = "HIDE/EVADE"
 align = 1
 
 [node name="CheckBox15" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_top = 58.0
-margin_right = 840.0
-margin_bottom = 83.0
+margin_top = 56.0
+margin_right = 115.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1730,9 +1728,10 @@ text = "DODGE/ESCAPE"
 align = 1
 
 [node name="CheckBox16" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 87.0
-margin_right = 130.0
-margin_bottom = 112.0
+margin_left = 119.0
+margin_top = 56.0
+margin_right = 215.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1742,10 +1741,10 @@ text = "FALSIFICATION"
 align = 1
 
 [node name="CheckBox17" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_top = 87.0
-margin_right = 318.0
-margin_bottom = 112.0
+margin_left = 219.0
+margin_top = 56.0
+margin_right = 332.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1755,10 +1754,10 @@ text = "STEALTH"
 align = 1
 
 [node name="CheckBox18" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_top = 87.0
-margin_right = 544.0
-margin_bottom = 112.0
+margin_left = 336.0
+margin_top = 56.0
+margin_right = 467.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1768,10 +1767,10 @@ text = "QUESTIONING"
 align = 1
 
 [node name="CheckBox19" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_top = 87.0
-margin_right = 674.0
-margin_bottom = 112.0
+margin_left = 471.0
+margin_top = 56.0
+margin_right = 579.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1781,10 +1780,10 @@ text = "BULLYING"
 align = 1
 
 [node name="CheckBox20" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_top = 87.0
-margin_right = 840.0
-margin_bottom = 112.0
+margin_left = 583.0
+margin_top = 56.0
+margin_right = 759.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1794,9 +1793,10 @@ text = "LEADERSHIP"
 align = 1
 
 [node name="CheckBox21" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 116.0
-margin_right = 130.0
-margin_bottom = 141.0
+margin_left = 763.0
+margin_top = 56.0
+margin_right = 864.0
+margin_bottom = 80.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1806,10 +1806,9 @@ text = "MEDICINES"
 align = 1
 
 [node name="CheckBox22" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_top = 116.0
-margin_right = 318.0
-margin_bottom = 141.0
+margin_top = 84.0
+margin_right = 115.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1819,10 +1818,10 @@ text = "MEDICINE"
 align = 1
 
 [node name="CheckBox23" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_top = 116.0
-margin_right = 544.0
-margin_bottom = 141.0
+margin_left = 119.0
+margin_top = 84.0
+margin_right = 215.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1832,10 +1831,10 @@ text = "NEGOTIATE"
 align = 1
 
 [node name="CheckBox24" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_top = 116.0
-margin_right = 674.0
-margin_bottom = 141.0
+margin_left = 219.0
+margin_top = 84.0
+margin_right = 332.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1845,10 +1844,10 @@ text = "PERCEPTION"
 align = 1
 
 [node name="CheckBox25" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_top = 116.0
-margin_right = 840.0
-margin_bottom = 141.0
+margin_left = 336.0
+margin_top = 84.0
+margin_right = 467.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1858,9 +1857,10 @@ text = "PERSUASION_AND_LABIA"
 align = 1
 
 [node name="CheckBox26" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 145.0
-margin_right = 130.0
-margin_bottom = 170.0
+margin_left = 471.0
+margin_top = 84.0
+margin_right = 579.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1870,10 +1870,10 @@ text = "FIRST_AID"
 align = 1
 
 [node name="CheckBox27" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 134.0
-margin_top = 145.0
-margin_right = 318.0
-margin_bottom = 170.0
+margin_left = 583.0
+margin_top = 84.0
+margin_right = 759.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1883,10 +1883,10 @@ text = "TORTURE/DRUG_RESISTANCE"
 align = 1
 
 [node name="CheckBox28" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 322.0
-margin_top = 145.0
-margin_right = 544.0
-margin_bottom = 170.0
+margin_left = 763.0
+margin_top = 84.0
+margin_right = 864.0
+margin_bottom = 108.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1896,10 +1896,9 @@ text = "RESISTANCE"
 align = 1
 
 [node name="CheckBox29" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 548.0
-margin_top = 145.0
-margin_right = 674.0
-margin_bottom = 170.0
+margin_top = 112.0
+margin_right = 115.0
+margin_bottom = 136.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1909,10 +1908,10 @@ text = "SEDUCTION"
 align = 1
 
 [node name="CheckBox30" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 678.0
-margin_top = 145.0
-margin_right = 840.0
-margin_bottom = 170.0
+margin_left = 119.0
+margin_top = 112.0
+margin_right = 215.0
+margin_bottom = 136.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1922,9 +1921,10 @@ text = "SURVIVAL"
 align = 1
 
 [node name="CheckBox31" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 174.0
-margin_right = 130.0
-margin_bottom = 199.0
+margin_left = 219.0
+margin_top = 112.0
+margin_right = 332.0
+margin_bottom = 136.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -1934,28 +1934,28 @@ text = "TRACKING"
 align = 1
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_left = 860.0
-margin_right = 864.0
-margin_bottom = 559.0
+margin_left = 884.0
+margin_right = 888.0
+margin_bottom = 528.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_left = 884.0
-margin_right = 984.0
-margin_bottom = 559.0
+margin_left = 908.0
+margin_right = 1008.0
+margin_bottom = 528.0
 alignment = 1
 
 [node name="Button" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2"]
-margin_top = 237.0
+margin_top = 222.0
 margin_right = 100.0
-margin_bottom = 277.0
+margin_bottom = 262.0
 rect_min_size = Vector2( 100, 0 )
 custom_fonts/font = ExtResource( 3 )
 text = "LOAD"
 
 [node name="Button2" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2"]
-margin_top = 281.0
+margin_top = 266.0
 margin_right = 100.0
-margin_bottom = 321.0
+margin_bottom = 306.0
 custom_fonts/font = ExtResource( 3 )
 text = "Inventario"
 
@@ -2135,12 +2135,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -168.5
+margin_top = -67.0
+margin_right = 168.5
+margin_bottom = 67.0
 window_title = "Adicionar Vida"
 dialog_text = "Escreva o valor que voce deseja adicionar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LineEdit" type="LineEdit" parent="TabContainer/SHEET_VISUALIZER/AddMoneyPopup"]
 anchor_left = 0.5
@@ -2148,9 +2151,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -160.5
-margin_top = -14.0
+margin_top = -29.0
 margin_right = 160.5
-margin_bottom = 26.0
+margin_bottom = 11.0
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2161,10 +2164,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -164.0
+margin_top = -67.0
+margin_right = 164.0
+margin_bottom = 67.0
 window_title = "Remover Vida"
 dialog_text = "Escreva o valor que voce deseja remover"
 
@@ -2174,9 +2177,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -156.0
-margin_top = -14.0
+margin_top = -29.0
 margin_right = 156.0
-margin_bottom = 26.0
+margin_bottom = 11.0
 align = 1
 max_length = 6
 __meta__ = {

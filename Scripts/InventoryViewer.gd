@@ -128,9 +128,9 @@ func _print_inventory():
 	print("Names: " + String(Global.curentSheet["names"]))
 	print("Base Damage: " + String(Global.curentSheet["base_damage"]))
 	print("Base Defense: " + String(Global.curentSheet["base_defense"]))
-	print("requirements: " + String(Global.curentSheet["requirements"]))
-	print("durability: " + String(Global.curentSheet["durability"]))
-	print("rarity: " + String(Global.curentSheet["rarity"]))
+	print("Requirements: " + String(Global.curentSheet["requirements"]))
+	print("Durability: " + String(Global.curentSheet["durability"]))
+	print("Rarity: " + String(Global.curentSheet["rarity"]))
 	print("Abilitis: " + String(Global.curentSheet["ability"]))
 
 func _add_itens():
