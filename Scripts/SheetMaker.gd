@@ -62,7 +62,14 @@ var temp_sheet = {
 	"requirements": [],
 	"durability": [],
 	"rarity": [],
-	"ability": []
+	"ability": [],
+	#Grimory
+	"g_index": [],
+	"g_names": [],
+	"g_ability": [],
+	"g_requirements": [],
+	"g_cost": [],
+	"g_min_level": []
 }
 
 var tempSheetPath = null
@@ -86,6 +93,7 @@ func _ready():
 	$FileDialog2.add_filter("*.sheet")
 	pass
 
+# warning-ignore:unused_argument
 func _process(delta):
 	for button in get_tree().get_nodes_in_group("skills_buttons"):
 		_skills(button)
@@ -336,7 +344,10 @@ func _on_ButtonAddSanity_button_down():
 # warning-ignore:shadowed_variable
 func _on_FileDialog_file_selected(path):
 	tempSheetPath = path
-	temp_sheet = SaveSistem.load_data(path)
+	var a = SaveSistem.load_data(path)
+	for i in temp_sheet:
+		if i in a:
+			temp_sheet[i] = a[i]
 	_sync_lines()
 	pass 
 

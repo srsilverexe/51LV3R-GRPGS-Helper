@@ -16,8 +16,9 @@ font_data = ExtResource( 1 )
 size = 26
 font_data = ExtResource( 1 )
 
-[sub_resource type="InputEventAction" id=4]
-action = "short_calculators"
+[sub_resource type="InputEventKey" id=4]
+shift = true
+scancode = 67
 
 [sub_resource type="ShortCut" id=5]
 shortcut = SubResource( 4 )
@@ -103,6 +104,7 @@ margin_right = 553.0
 margin_bottom = 198.0
 hint_tooltip = "TOOLTIP_SHEET_MANAGER"
 custom_fonts/font = ExtResource( 3 )
+shortcut_in_tooltip = false
 text = "SHEET_MANAGER"
 
 [node name="Button3" type="Button" parent="Panel/VBoxContainer"]
@@ -111,6 +113,7 @@ margin_right = 553.0
 margin_bottom = 279.0
 hint_tooltip = "TOOLTIP_DICES"
 custom_fonts/font = ExtResource( 3 )
+shortcut_in_tooltip = false
 text = "DICES"
 
 [node name="ButtonConfigs" type="Button" parent="Panel/VBoxContainer"]
@@ -119,6 +122,7 @@ margin_right = 553.0
 margin_bottom = 360.0
 hint_tooltip = "TOOLTIP_SETINGS"
 custom_fonts/font = ExtResource( 3 )
+shortcut_in_tooltip = false
 text = "SETTINGS"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,6 +134,7 @@ margin_right = 553.0
 margin_bottom = 441.0
 hint_tooltip = "TOOLTIP_EXIT"
 custom_fonts/font = ExtResource( 3 )
+shortcut_in_tooltip = false
 text = "EXIT"
 __meta__ = {
 "_edit_use_anchors_": false

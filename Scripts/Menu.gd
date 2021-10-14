@@ -22,6 +22,7 @@ func _on_Button3_button_down():
 	pass 
 
 func _on_ButtonConfigs_button_down():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/Settings.tscn")
 	pass 
 

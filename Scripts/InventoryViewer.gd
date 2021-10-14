@@ -20,7 +20,7 @@ func _ready():
 	_update_inventory()
 
 func _process(delta):
-	if Global.curentSheet != null:
+	if Global.curentSheetPath != null:
 		SaveSistem.save_data(Global.curentSheetPath, Global.curentSheet)
 	if $AcceptDialog.visible:
 		if $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text == "" \
@@ -224,7 +224,9 @@ func _on_TextureButton_button_down():
 	pass 
 
 func _on_FileDialog_file_selected(path):
-	Global.curentSheet = SaveSistem.load_data(path)
 	Global.curentSheetPath = path
-	Global.curentSheet = SaveSistem.load_data(path)
+	var a = SaveSistem.load_data(path)
+	for i in Global.curentSheet:
+		if i in a:
+			Global.curentSheet[i] = a[i]
 	_update_inventory()
