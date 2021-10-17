@@ -95,7 +95,8 @@ func _init():
 	dir.make_dir("sheets")
 
 func _ready():
-	setings = SaveSistem.load_data("user://settings.cfg")
+	if SaveSistem.load_data("user://settings.cfg") != {}:
+		setings = SaveSistem.load_data("user://settings.cfg")
 
 # warning-ignore:unused_argument
 func _process(delta):
