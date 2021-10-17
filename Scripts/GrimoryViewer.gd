@@ -23,10 +23,10 @@ func _ready():
 
 func _process(delta):
 	if Global.curentSheetPath != null:
-		if Global.setings["AutoSave"]:
+		if Global.setings["auto_save"]:
 			if s:
 				s = false
-				$Timer.start(Global.setings["AutoSaveFrequency"])
+				$Timer.start(Global.setings["auto_save_frequency"])
 	
 	
 	if $AcceptDialog.visible:
@@ -247,6 +247,6 @@ func _on_Timer_timeout():
 	SaveSistem.save_data(Global.curentSheetPath, Global.curentSheet)
 	print("Saved")
 	if Global.curentSheetPath != null:
-		if Global.setings["AutoSave"]:
-			$Timer.start(Global.setings["AutoSaveFrequency"])
+		if Global.setings["auto_save"]:
+			$Timer.start(Global.setings["auto_save_frequency"])
 	pass # Replace with function body.

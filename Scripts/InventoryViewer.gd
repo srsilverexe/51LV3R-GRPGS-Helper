@@ -23,10 +23,10 @@ func _ready():
 
 func _process(delta):
 	if Global.curentSheetPath != null:
-		if Global.setings["AutoSave"]:
+		if Global.setings["auto_save"]:
 			if s:
 				s = false
-				$Timer.start(Global.setings["AutoSaveFrequency"])
+				$Timer.start(Global.setings["auto_save_frequency"])
 			
 	if $AcceptDialog.visible:
 		if $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text == "" \
@@ -230,8 +230,8 @@ func _on_FileDialog_file_selected(path):
 
 func _on_Timer_timeout():
 	if Global.curentSheetPath != null:
-		if Global.setings["AutoSave"]:
+		if Global.setings["auto_save"]:
 			if s:
 				s = false
-				$Timer.start(Global.setings["AutoSaveFrequency"])
+				$Timer.start(Global.setings["auto_save_frequency"])
 	pass # Replace with function body.
