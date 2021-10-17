@@ -105,9 +105,9 @@ func _ready():
 func _process(delta):
 	TranslationServer.set_locale(setings["Linguage"])
 	if setings["Theme"] == "dark":
-		ProjectSettings.set_setting("gui/theme/custom", darkTheme)
+		get_tree().current_scene.theme = darkTheme
 	elif setings["Theme"] == "light":
-		ProjectSettings.set_setting("gui/theme/custom", lightTheme)
+		get_tree().current_scene.theme = lightTheme
 	ProjectSettings.set_setting("logging/file_logging/enable_file_logging", setings["LogFiles"])
 	ProjectSettings.set_setting("logging/file_logging/max_log_files", setings["MaxLogFiles"])
 

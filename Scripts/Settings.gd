@@ -10,6 +10,7 @@ func _ready():
 		$Panel/GridContainer/VBoxContainer2/OptionButton.selected = 0
 	elif Global.setings["Theme"] == "light":
 		$Panel/GridContainer/VBoxContainer2/OptionButton.selected = 1
+
 	
 	$Panel/GridContainer/VBoxContainer3/CheckButton.pressed = Global.setings["AutoSave"]
 	$Panel/GridContainer/VBoxContainer4/CheckButton.pressed = Global.setings["LogFiles"]
