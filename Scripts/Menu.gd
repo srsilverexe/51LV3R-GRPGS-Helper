@@ -16,7 +16,7 @@ func _on_Button2_button_down():
 	get_tree().change_scene("res://Scenes/SheetManager.tscn")
 	pass 
 
-func _on_Button3_button_down():
+func _on_ButtonDices_button_down():
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/Dices.tscn")
 	pass 
@@ -29,4 +29,3 @@ func _on_ButtonConfigs_button_down():
 func _on_ButtonQuit_button_down():
 	get_tree().quit()
 	pass 
-

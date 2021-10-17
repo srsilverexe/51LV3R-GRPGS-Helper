@@ -7,7 +7,7 @@ func _ready():
 
 func _on_TabContainer_tab_selected(tab):
 	if tab == 1:
-		if Global.curentSheet == null:
+		if Global.curentSheetPath == null:
 			$FileDialog.popup_centered()
 			$FileDialog.popup()
 	pass 

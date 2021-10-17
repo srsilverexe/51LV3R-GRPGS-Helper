@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/Calculators/Damage/Especial.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Calculators/Status.gd" type="Script" id=5]
 [ext_resource path="res://Scripts/Calculators/Hurts.gd" type="Script" id=6]
-[ext_resource path="res://DarkTheme.tres" type="Theme" id=7]
+[ext_resource path="res://Themes/Dark.theme" type="Theme" id=7]
 [ext_resource path="res://Assets/Icons/ReturnIcon.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Calculators/Calculator.gd" type="Script" id=9]
 
@@ -45,10 +45,10 @@ margin_bottom = -10.0
 anchor_top = -0.014
 anchor_right = 1.0
 anchor_bottom = 1.007
-margin_left = -3.0
-margin_top = -0.174
-margin_right = 5.0
-margin_bottom = 1.08704
+margin_left = -9.0
+margin_top = -0.314
+margin_right = 9.0
+margin_bottom = 5.15704
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -812,6 +812,7 @@ shortcut_in_tooltip = false
 shortcut = SubResource( 2 )
 texture_normal = ExtResource( 8 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -11,17 +11,23 @@ var ability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer8/VBoxConta
 
 var f = [index_line, name_line, base_damage_line, base_defense_line, requirements_line, durability_line, rarity_line, ability_line]
 
+var s = true
+
 func _ready():
 	$FileDialog.current_dir = "user://sheets/"
 	$FileDialog.current_path = "user://sheets/"
 	$FileDialog.add_filter("*.sheet")
-	if Global.curentSheet == null:
+	if Global.curentSheetPath == null:
 		$FileDialog.popup_centered()
 	_update_inventory()
 
 func _process(delta):
 	if Global.curentSheetPath != null:
-		SaveSistem.save_data(Global.curentSheetPath, Global.curentSheet)
+		if Global.setings["AutoSave"]:
+			if s:
+				s = false
+				$Timer.start(Global.setings["AutoSaveFrequency"])
+			
 	if $AcceptDialog.visible:
 		if $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text == "" \
 		or $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit2.text == "" \
@@ -66,6 +72,7 @@ func _update_inventory():
 			var durability_label = Label.new()
 			var rarity_label = Label.new()
 			var ability_label = Label.new()
+			var labels = [index_label, name_label, base_damage_label, base_defense_label, requirements_label, durability_label, rarity_label, ability_label]
 			index_label.text = Global.curentSheet["index"][i]
 			name_label.text = Global.curentSheet["names"][i]
 			base_damage_label.text = Global.curentSheet["base_damage"][i]
@@ -74,22 +81,9 @@ func _update_inventory():
 			durability_label.text = Global.curentSheet["durability"][i]
 			rarity_label.text = Global.curentSheet["rarity"][i]
 			ability_label.text = Global.curentSheet["ability"][i]
-			index_label.align = 1
-			name_label.align = 1
-			base_damage_label.align = 1
-			base_defense_label.align = 1
-			requirements_label.align = 1
-			durability_label.align = 1
-			rarity_label.align = 1
-			ability_label.align = 1
-			index_label.valign = 1
-			name_label.valign = 1
-			base_damage_label.valign = 1
-			base_defense_label.valign = 1
-			requirements_label.valign = 1
-			durability_label.valign = 1
-			rarity_label.valign = 1
-			ability_label.valign = 1
+			for l in labels:
+				l.align = 1
+				l.valign = 1
 			get_node(index_line).add_child(index_label, true)
 			get_node(name_line).add_child(name_label, true)
 			get_node(base_damage_line).add_child(base_damage_label, true)
@@ -158,7 +152,8 @@ func _remove_itens():
 		Global.curentSheet["index"].remove(Global.curentSheet["index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		_update_index()
 	else:
-		$AcceptDialog5.popup_centered()
+		$ErrorPopup.dialog_text = "NON-EXISTING_INDEX"
+		$ErrorPopup.popup_centered()
 	_clear_edit_line()
 	_update_inventory()
 	_print_inventory()
@@ -212,7 +207,8 @@ func _on_AcceptDialog3_confirmed():
 	if Global.curentSheet["index"].has($AcceptDialog4.selected_index):
 		$AcceptDialog4.popup_centered()
 	else:
-		$AcceptDialog5.popup_centered()
+		$ErrorPopup.dialog_text = "NON-EXISTING_INDEX"
+		$ErrorPopup.popup_centered()
 	pass 
 
 func _on_AcceptDialog4_confirmed():
@@ -230,3 +226,12 @@ func _on_FileDialog_file_selected(path):
 		if i in a:
 			Global.curentSheet[i] = a[i]
 	_update_inventory()
+
+
+func _on_Timer_timeout():
+	if Global.curentSheetPath != null:
+		if Global.setings["AutoSave"]:
+			if s:
+				s = false
+				$Timer.start(Global.setings["AutoSaveFrequency"])
+	pass # Replace with function body.

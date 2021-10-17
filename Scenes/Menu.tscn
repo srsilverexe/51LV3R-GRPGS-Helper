@@ -107,7 +107,7 @@ custom_fonts/font = ExtResource( 3 )
 shortcut_in_tooltip = false
 text = "SHEET_MANAGER"
 
-[node name="Button3" type="Button" parent="Panel/VBoxContainer"]
+[node name="ButtonDices" type="Button" parent="Panel/VBoxContainer"]
 margin_top = 218.0
 margin_right = 553.0
 margin_bottom = 279.0
@@ -140,8 +140,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -121.476
+margin_top = -30.0
+margin_right = -8.47559
+custom_fonts/font = SubResource( 2 )
+text = "Version: 1.2.1"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="button_down" from="Panel/VBoxContainer/Button" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/Button2" to="." method="_on_Button2_button_down"]
-[connection signal="button_down" from="Panel/VBoxContainer/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="Panel/VBoxContainer/ButtonDices" to="." method="_on_ButtonDices_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/ButtonConfigs" to="." method="_on_ButtonConfigs_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/ButtonQuit" to="." method="_on_ButtonQuit_button_down"]

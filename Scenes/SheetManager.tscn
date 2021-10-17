@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Fonts/Font.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://DarkTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Themes/Dark.theme" type="Theme" id=2]
 [ext_resource path="res://Assets/Fonts/Normal.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scripts/SkillCheckBox.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/SheetMaker.gd" type="Script" id=5]
@@ -66,6 +66,7 @@ __meta__ = {
 }
 
 [node name="SHEET_MAKER" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -986,10 +987,10 @@ __meta__ = {
 [node name="AcceptDialog" type="AcceptDialog" parent="TabContainer/SHEET_MAKER"]
 margin_right = 438.0
 margin_bottom = 62.0
+theme = ExtResource( 2 )
 dialog_text = "Para poder salvar primeiro distribua todos os pontos e/ou pericias"
 
 [node name="SHEET_VISUALIZER" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -1945,19 +1946,26 @@ margin_bottom = 528.0
 alignment = 1
 
 [node name="Button" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2"]
-margin_top = 222.0
+margin_top = 200.0
 margin_right = 100.0
-margin_bottom = 262.0
+margin_bottom = 240.0
 rect_min_size = Vector2( 100, 0 )
 custom_fonts/font = ExtResource( 3 )
 text = "LOAD"
 
 [node name="Button2" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2"]
-margin_top = 266.0
+margin_top = 244.0
 margin_right = 100.0
-margin_bottom = 306.0
+margin_bottom = 284.0
 custom_fonts/font = ExtResource( 3 )
 text = "Inventario"
+
+[node name="Button3" type="Button" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2"]
+margin_top = 288.0
+margin_right = 100.0
+margin_bottom = 328.0
+custom_fonts/font = ExtResource( 3 )
+text = "Grimory"
 
 [node name="FileDialog" type="FileDialog" parent="TabContainer/SHEET_VISUALIZER"]
 pause_mode = 2
@@ -1979,12 +1987,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -168.5
+margin_top = -55.0
+margin_right = 168.5
+margin_bottom = 55.0
+theme = ExtResource( 2 )
 window_title = "Adicionar Vida"
 dialog_text = "Escreva o valor que voce deseja adicionar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LineEdit" type="LineEdit" parent="TabContainer/SHEET_VISUALIZER/AddLifePopup"]
 anchor_left = 0.5
@@ -1992,9 +2004,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -160.5
-margin_top = -14.0
+margin_top = -17.0
 margin_right = 160.5
-margin_bottom = 26.0
+margin_bottom = 19.0
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2005,10 +2017,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -164.0
+margin_top = -58.0
+margin_right = 164.0
+margin_bottom = 58.0
+theme = ExtResource( 2 )
 window_title = "Remover Vida"
 dialog_text = "Escreva o valor que voce deseja remover"
 
@@ -2018,9 +2031,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -156.0
-margin_top = -14.0
+margin_top = -20.0
 margin_right = 156.0
-margin_bottom = 26.0
+margin_bottom = 18.0
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2031,10 +2044,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -168.5
+margin_top = -54.5
+margin_right = 168.5
+margin_bottom = 54.5
+theme = ExtResource( 2 )
 window_title = "Adicionar Vida"
 dialog_text = "Escreva o valor que voce deseja adicionar"
 
@@ -2044,9 +2058,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -160.5
-margin_top = -14.0
+margin_top = -16.5
 margin_right = 160.5
-margin_bottom = 26.0
+margin_bottom = 19.5
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2057,10 +2071,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -164.0
+margin_top = -54.5
+margin_right = 164.0
+margin_bottom = 54.5
+theme = ExtResource( 2 )
 window_title = "Remover Vida"
 dialog_text = "Escreva o valor que voce deseja remover"
 
@@ -2070,9 +2085,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -156.0
-margin_top = -14.0
+margin_top = -16.5
 margin_right = 156.0
-margin_bottom = 26.0
+margin_bottom = 19.5
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2083,10 +2098,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -168.5
+margin_top = -53.5
+margin_right = 168.5
+margin_bottom = 53.5
+theme = ExtResource( 2 )
 window_title = "Adicionar Vida"
 dialog_text = "Escreva o valor que voce deseja adicionar"
 
@@ -2096,9 +2112,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -160.5
-margin_top = -14.0
+margin_top = -15.5
 margin_right = 160.5
-margin_bottom = 26.0
+margin_bottom = 20.5
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2109,10 +2125,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -40.0
-margin_right = 140.5
-margin_bottom = 40.0
+margin_left = -164.0
+margin_top = -56.5
+margin_right = 164.0
+margin_bottom = 56.5
+theme = ExtResource( 2 )
 window_title = "Remover Vida"
 dialog_text = "Escreva o valor que voce deseja remover"
 
@@ -2122,9 +2139,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -156.0
-margin_top = -14.0
+margin_top = -18.5
 margin_right = 156.0
-margin_bottom = 26.0
+margin_bottom = 17.5
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2136,9 +2153,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -168.5
-margin_top = -67.0
+margin_top = -55.5
 margin_right = 168.5
-margin_bottom = 67.0
+margin_bottom = 55.5
+theme = ExtResource( 2 )
 window_title = "Adicionar Vida"
 dialog_text = "Escreva o valor que voce deseja adicionar"
 __meta__ = {
@@ -2151,9 +2169,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -160.5
-margin_top = -29.0
+margin_top = -17.5
 margin_right = 160.5
-margin_bottom = 11.0
+margin_bottom = 18.5
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -2165,9 +2183,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -164.0
-margin_top = -67.0
+margin_top = -58.5
 margin_right = 164.0
-margin_bottom = 67.0
+margin_bottom = 58.5
+theme = ExtResource( 2 )
 window_title = "Remover Vida"
 dialog_text = "Escreva o valor que voce deseja remover"
 
@@ -2177,9 +2196,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -156.0
-margin_top = -29.0
+margin_top = -20.5
 margin_right = 156.0
-margin_bottom = 11.0
+margin_bottom = 18.5
 align = 1
 max_length = 6
 __meta__ = {
@@ -2199,6 +2218,7 @@ shortcut_in_tooltip = false
 shortcut = SubResource( 9 )
 texture_normal = ExtResource( 8 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2238,6 +2258,7 @@ __meta__ = {
 [connection signal="button_down" from="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer4/ButtonAddMoney" to="TabContainer/SHEET_VISUALIZER" method="_on_ButtonAddMoney_button_down"]
 [connection signal="button_down" from="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2/Button" to="TabContainer/SHEET_VISUALIZER" method="_on_Button_button_down"]
 [connection signal="button_down" from="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer2/Button3" to="." method="_on_Button3_button_down"]
 [connection signal="file_selected" from="TabContainer/SHEET_VISUALIZER/FileDialog" to="TabContainer/SHEET_VISUALIZER" method="_on_FileDialog_file_selected"]
 [connection signal="confirmed" from="TabContainer/SHEET_VISUALIZER/AddLifePopup" to="TabContainer/SHEET_VISUALIZER" method="_on_AddLifePopup_confirmed"]
 [connection signal="confirmed" from="TabContainer/SHEET_VISUALIZER/RemoveLifePopup" to="TabContainer/SHEET_VISUALIZER" method="_on_RemoveLifePopup_confirmed"]

@@ -114,3 +114,7 @@ TOOLTIP_SHEET_MANAGER,Repositorio de gerenciadores de ficha,Repository of sheet 
 TOOLTIP_DICES,Emulador de dados,Dice emulator
 TOOLTIP_SETINGS,Editor de configuracoes do programa,Program Settings Editor
 TOOLTIP_EXIT,Fechar o programa,Close the program
+COST,Custo,Cost
+MIN_LEVEL,Level Minimo,Min Level
+USE,Usar,Use
+NON-EXISTING_INDEX,Index nao existente,Non-existing index
