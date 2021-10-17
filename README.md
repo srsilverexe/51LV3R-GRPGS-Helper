@@ -26,7 +26,7 @@
 - [X] Make a sheet visualizer
 - [X] Translate to English
 - [X] Make an inventory viewer and editor
-- [ ] Make a grimory viewer
+- [X] Make an grimory viewer and editor
 - [ ] Make a npc/enemies generator
 - [ ] Make more GMs tools
 - [ ] Make more Players tools

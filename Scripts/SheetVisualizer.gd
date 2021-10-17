@@ -7,21 +7,36 @@ func _ready():
 
 func _on_TabContainer_tab_selected(tab):
 	if tab == 1:
-		if Global.curentSheet == null:
+		if Global.curentSheetPath == null:
 			$FileDialog.popup_centered()
 			$FileDialog.popup()
 	pass 
 
 func _on_FileDialog_file_selected(path):
-	Global.curentSheet = SaveSistem.load_data(path)
 	Global.curentSheetPath = path
-	Global.curentSheet = SaveSistem.load_data(path)
+	var a = SaveSistem.load_data(path)
+	for i in Global.curentSheet:
+		if i in a:
+			Global.curentSheet[i] = a[i]
 	pass 
 
+# warning-ignore:unused_argument
 func _process(delta):
+	if Global.setings["theme"] == "dark":
+		var t = Theme.new()
+		t.set_color("font_color_disabled", "CheckBox", Color(1.0, 1.0, 1.0))
+		for b in $HBoxContainer/VBoxContainer/VBoxContainer/GridContainer.get_children():
+			b.theme = t 
+	elif Global.setings["theme"] == "light":
+		var t = Theme.new()
+		t.set_color("font_color_disabled", "CheckBox", Color(0.105882, 0.105882, 0.105882))
+		for b in $HBoxContainer/VBoxContainer/VBoxContainer/GridContainer.get_children():
+			b.theme = t 
+	
 	if Global.curentSheet != null:
 		_sync_labels()
-		_sheet_update()
+		if Global.curentSheetPath != null:
+			_sheet_update()
 	pass
 
 func _sync_labels():
