@@ -12,6 +12,11 @@ var f = [index_line, name_line, requirements_line, ability_line, cost_line, min_
 var s = true
 
 func _ready():
+	if Global.settings["theme"] == "dark":
+		$FileDialog.theme = Global.darkTheme
+	elif Global.settings["theme"] == "light":
+		$FileDialog.theme = Global.lightTheme
+	
 	$FileDialog.current_dir = "user://sheets/"
 	$FileDialog.current_path = "user://sheets/"
 	$FileDialog.add_filter("*.sheet")

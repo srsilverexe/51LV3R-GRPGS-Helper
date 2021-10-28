@@ -85,6 +85,14 @@ var points = 10
 var skills = 1
 
 func _ready():
+	if Global.settings["theme"] == "dark":
+		$FileDialog.theme = Global.darkTheme
+		$FileDialog2.theme = Global.darkTheme
+	elif Global.settings["theme"] == "light":
+		$FileDialog.theme = Global.lightTheme
+		$FileDialog2.theme = Global.lightTheme
+	
+	
 	$FileDialog.current_dir = "user://sheets/"
 	$FileDialog2.current_dir = "user://sheets/"
 	$FileDialog.current_path = "user://sheets/"
