@@ -1,6 +1,11 @@
 extends Tabs
 
 func _ready():
+	if Global.settings["theme"] == "dark":
+		$FileDialog.theme = Global.darkTheme
+	elif Global.settings["theme"] == "light":
+		$FileDialog.theme = Global.lightTheme
+	
 	$FileDialog.current_dir = "user://sheets/"
 	$FileDialog.current_path = "user://sheets/"
 	$FileDialog.add_filter("*.sheet")
@@ -22,12 +27,12 @@ func _on_FileDialog_file_selected(path):
 
 # warning-ignore:unused_argument
 func _process(delta):
-	if Global.setings["theme"] == "dark":
+	if Global.settings["theme"] == "dark":
 		var t = Theme.new()
 		t.set_color("font_color_disabled", "CheckBox", Color(1.0, 1.0, 1.0))
 		for b in $HBoxContainer/VBoxContainer/VBoxContainer/GridContainer.get_children():
 			b.theme = t 
-	elif Global.setings["theme"] == "light":
+	elif Global.settings["theme"] == "light":
 		var t = Theme.new()
 		t.set_color("font_color_disabled", "CheckBox", Color(0.105882, 0.105882, 0.105882))
 		for b in $HBoxContainer/VBoxContainer/VBoxContainer/GridContainer.get_children():

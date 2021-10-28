@@ -1,6 +1,6 @@
 extends Node
 
-var setings = {
+var settings = {
 	"language": "en",
 	"auto_save": true,
 	"auto_save_frequency": 0,
@@ -86,8 +86,8 @@ var curentSheetPath = null
 var shortcurts = preload("res://Scenes/Popups/PopupShortcurts.tscn")
 var noFunc = preload("res://Scenes/Popups/UnvaliableFunc.tscn")
 
-var darktheme = preload("res://themes/Dark.theme")
-var lighttheme = preload("res://themes/Light.theme")
+var darkTheme = preload("res://Themes/Dark.theme")
+var lightTheme = preload("res://Themes/Light.theme")
 
 func _init():
 	var dir = Directory.new()
@@ -95,18 +95,20 @@ func _init():
 	dir.make_dir("sheets")
 
 func _ready():
-	if SaveSistem.load_data("user://settings.cfg") != {}:
-		setings = SaveSistem.load_data("user://settings.cfg")
+	var f = File.new()
+	if f.file_exists("user://settings.cfg"):
+		if SaveSistem.load_data("user://settings.cfg") != {}:
+			settings = SaveSistem.load_data("user://settings.cfg")
 
 # warning-ignore:unused_argument
 func _process(delta):
-	TranslationServer.set_locale(setings["language"])
-	if setings["theme"] == "dark":
-		get_tree().current_scene.theme = darktheme
-	elif setings["theme"] == "light":
-		get_tree().current_scene.theme = lighttheme
-	ProjectSettings.set_setting("logging/file_logging/enable_file_logging", setings["log_files"])
-	ProjectSettings.set_setting("logging/file_logging/max_log_files", setings["max_log_files"])
+	TranslationServer.set_locale(settings["language"])
+	if settings["theme"] == "dark":
+		get_tree().current_scene.theme = darkTheme
+	elif settings["theme"] == "light":
+		get_tree().current_scene.theme = lightTheme
+	ProjectSettings.set_setting("logging/file_logging/enable_file_logging", settings["log_files"])
+	ProjectSettings.set_setting("logging/file_logging/max_log_files", settings["max_log_files"])
 
 
 func _input(event):
