@@ -26,6 +26,7 @@ func _ready():
 		$FileDialog.popup_centered()
 	_update_inventory()
 
+# warning-ignore:unused_argument
 func _process(delta):
 	if Global.curentSheetPath != null:
 		if Global.setings["auto_save"]:
@@ -221,6 +222,7 @@ func _on_AcceptDialog4_confirmed():
 	pass 
 
 func _on_TextureButton_button_down():
+# warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/SheetManager.tscn")
 	pass 
 

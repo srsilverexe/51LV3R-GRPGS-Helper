@@ -13,15 +13,16 @@ func _ready():
 
 	
 	$Panel/GridContainer/VBoxContainer3/CheckButton.pressed = Global.settings["auto_save"]
-	$Panel/GridContainer/VBoxContainer4/CheckButton.pressed = Global.settings["log_files"]
+	$Panel/GridContainer/VBoxContainer4/CheckButton.pressed = Global.settings["dices_log_files"]
 	
 	$Panel/GridContainer/VBoxContainer3/LineEdit.text = String(Global.settings["auto_save_frequency"])
 	print(Global.settings)
 	print(SaveSistem.load_data("user://settings.cfg"))
 
+# warning-ignore:unused_argument
 func _process(delta):
 	Global.settings["auto_save"] = $Panel/GridContainer/VBoxContainer3/CheckButton.pressed
-	Global.settings["log_files"] = $Panel/GridContainer/VBoxContainer4/CheckButton.pressed
+	Global.settings["dices_log_files"] = $Panel/GridContainer/VBoxContainer4/CheckButton.pressed
 	
 	if $Panel/GridContainer/VBoxContainer/OptionButton.selected == 0:
 		Global.settings["language"] = "en"
@@ -38,11 +39,6 @@ func _process(delta):
 		Global.settings["auto_save_frequency"] = int($Panel/GridContainer/VBoxContainer3/LineEdit.text)
 	else:
 		$Panel/GridContainer/VBoxContainer3/LineEdit.editable = false
-	
-	if $Panel/GridContainer/VBoxContainer4/CheckButton.pressed:
-		$Panel/GridContainer/VBoxContainer4/LineEdit.editable = true
-	else:
-		$Panel/GridContainer/VBoxContainer4/LineEdit.editable = false
 	
 	SaveSistem.save_data("user://settings.cfg", Global.settings)
 

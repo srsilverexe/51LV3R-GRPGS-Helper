@@ -10,6 +10,7 @@ var advantage = false
 var disadvantage = false
 
 
+# warning-ignore:unused_argument
 func _process(delta):
 	advantage = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton.pressed
 	disadvantage = $Panel/VBoxContainer/HBoxContainer/VBoxContainer2/CheckButton2.pressed
@@ -81,6 +82,10 @@ func _roll():
 		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(results.min())
 	else:
 		$Panel/VBoxContainer/VBoxContainer3/Label4.text = String(results)
+	
+	
+	if Global.settings["dices_log_files"]:
+		SaveSistem.log_saver("user://logs/DicesLog.log", String(results))
 	
 
 

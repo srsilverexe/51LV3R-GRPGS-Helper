@@ -4,7 +4,7 @@ var settings = {
 	"language": "en",
 	"auto_save": true,
 	"auto_save_frequency": 0,
-	"log_files": true,
+	"dices_log_files": true,
 	"max_log_files": 1,
 	"theme": "dark",
 }
@@ -93,6 +93,7 @@ func _init():
 	var dir = Directory.new()
 	dir.open("user://")
 	dir.make_dir("sheets")
+	dir.make_dir("dices")
 
 func _ready():
 	var f = File.new()
@@ -107,9 +108,7 @@ func _process(delta):
 		get_tree().current_scene.theme = darkTheme
 	elif settings["theme"] == "light":
 		get_tree().current_scene.theme = lightTheme
-	ProjectSettings.set_setting("logging/file_logging/enable_file_logging", settings["log_files"])
-	ProjectSettings.set_setting("logging/file_logging/max_log_files", settings["max_log_files"])
-
+	
 
 func _input(event):
 	if event.is_action_pressed("popup_shortcurts"):

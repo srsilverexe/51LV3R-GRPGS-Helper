@@ -40,7 +40,7 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
 margin_right = 682.0
-margin_bottom = 304.0
+margin_bottom = 296.0
 custom_constants/separation = 73
 alignment = 1
 __meta__ = {
@@ -48,60 +48,60 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
-margin_left = 65.0
+margin_left = 77.0
 margin_right = 230.0
-margin_bottom = 304.0
+margin_bottom = 296.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonAttack" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_right = 165.0
+margin_right = 153.0
 margin_bottom = 40.0
 custom_fonts/font = ExtResource( 1 )
 text = "ATTACK_DICE"
 
 [node name="ButtonRun" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 44.0
-margin_right = 165.0
+margin_right = 153.0
 margin_bottom = 84.0
 custom_fonts/font = ExtResource( 1 )
 text = "MOVEMENT_DICE"
 
 [node name="ButtonDef" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 88.0
-margin_right = 165.0
+margin_right = 153.0
 margin_bottom = 128.0
 custom_fonts/font = ExtResource( 1 )
 text = "DEFEND_DICE"
 
 [node name="ButtonShow" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 132.0
-margin_right = 165.0
+margin_right = 153.0
 margin_bottom = 172.0
 custom_fonts/font = ExtResource( 1 )
 text = "PERCEPTION_DICE"
 
 [node name="ButtonMagic" type="Button" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 176.0
-margin_right = 165.0
+margin_right = 153.0
 margin_bottom = 216.0
 custom_fonts/font = ExtResource( 1 )
 text = "SPECIAL_DICE"
 
 [node name="CheckButton" type="CheckButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 220.0
-margin_right = 165.0
-margin_bottom = 260.0
+margin_right = 153.0
+margin_bottom = 252.0
 custom_fonts/font = ExtResource( 1 )
 text = "CUSTOMIZED"
 align = 1
 
 [node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 264.0
-margin_right = 165.0
-margin_bottom = 304.0
+margin_top = 256.0
+margin_right = 153.0
+margin_bottom = 296.0
 custom_fonts/font = ExtResource( 1 )
 max_length = 4
 editable = false
@@ -110,20 +110,20 @@ placeholder_text = "MAXIMUM_VALUE"
 [node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 margin_left = 303.0
 margin_right = 362.0
-margin_bottom = 304.0
+margin_bottom = 296.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer4"]
-margin_top = 115.0
+margin_top = 111.0
 margin_right = 59.0
-margin_bottom = 145.0
+margin_bottom = 141.0
 custom_fonts/font = ExtResource( 1 )
 text = "AMOUNT"
 
 [node name="LineEdit" type="LineEdit" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer4"]
-margin_top = 149.0
+margin_top = 145.0
 margin_right = 59.0
-margin_bottom = 189.0
+margin_bottom = 185.0
 custom_fonts/font = ExtResource( 1 )
 text = "1"
 align = 1
@@ -135,36 +135,36 @@ __meta__ = {
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer/HBoxContainer"]
 margin_left = 435.0
-margin_right = 616.0
-margin_bottom = 304.0
+margin_right = 604.0
+margin_bottom = 296.0
 alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 110.0
-margin_right = 181.0
-margin_bottom = 150.0
+margin_top = 114.0
+margin_right = 169.0
+margin_bottom = 146.0
 custom_fonts/font = ExtResource( 1 )
 text = "ADVANTAGE"
 align = 1
 
 [node name="CheckButton2" type="CheckButton" parent="Panel/VBoxContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 154.0
-margin_right = 181.0
-margin_bottom = 194.0
+margin_top = 150.0
+margin_right = 169.0
+margin_bottom = 182.0
 custom_fonts/font = ExtResource( 1 )
 text = "DISADVANTAGE"
 
 [node name="Button" type="Button" parent="Panel/VBoxContainer"]
-margin_top = 308.0
+margin_top = 300.0
 margin_right = 682.0
-margin_bottom = 348.0
+margin_bottom = 340.0
 custom_fonts/font = ExtResource( 1 )
 text = "ROLL_DICE"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer"]
-margin_top = 352.0
+margin_top = 344.0
 margin_right = 682.0
-margin_bottom = 484.0
+margin_bottom = 476.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer3"]

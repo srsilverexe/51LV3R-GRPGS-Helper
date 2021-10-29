@@ -59,6 +59,8 @@ __meta__ = {
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
 tab_align = 0
 __meta__ = {
@@ -959,6 +961,8 @@ text = "LOAD"
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 2 )
 window_title = "Open a File"
 dialog_text = "Selecione o perfil que voce deseja caregar"
@@ -974,6 +978,8 @@ __meta__ = {
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 2 )
 dialog_text = "Selecione o local onde voce deseja salvar o perfil"
 access = 1
@@ -987,7 +993,7 @@ __meta__ = {
 margin_right = 438.0
 margin_bottom = 62.0
 theme = ExtResource( 2 )
-dialog_text = "Para poder salvar primeiro distribua todos os pontos e/ou pericias"
+dialog_text = "Para poder salvar primeiro distribua todos os pontos e/ou pericias e coloque as informações basicas"
 
 [node name="SHEET_VISUALIZER" type="Tabs" parent="TabContainer"]
 visible = false
@@ -1014,7 +1020,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_right = 864.0
+margin_right = 808.0
 margin_bottom = 528.0
 alignment = 1
 __meta__ = {
@@ -1022,8 +1028,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_right = 864.0
-margin_bottom = 354.0
+margin_top = 20.0
+margin_right = 808.0
+margin_bottom = 374.0
 custom_constants/separation = 40
 alignment = 1
 __meta__ = {
@@ -1031,8 +1038,8 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 120.0
-margin_right = 272.0
+margin_left = 92.0
+margin_right = 244.0
 margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
@@ -1123,13 +1130,13 @@ align = 1
 valign = 1
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 312.0
-margin_right = 316.0
+margin_left = 284.0
+margin_right = 288.0
 margin_bottom = 354.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 356.0
-margin_right = 494.0
+margin_left = 328.0
+margin_right = 466.0
 margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
@@ -1322,13 +1329,13 @@ rect_min_size = Vector2( 30, 0 )
 text = "+"
 
 [node name="VSeparator2" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 534.0
-margin_right = 538.0
+margin_left = 506.0
+margin_right = 510.0
 margin_bottom = 354.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer"]
-margin_left = 578.0
-margin_right = 743.0
+margin_left = 550.0
+margin_right = 715.0
 margin_bottom = 354.0
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
@@ -1514,21 +1521,21 @@ align = 1
 valign = 1
 
 [node name="HSeparator" type="HSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_top = 358.0
-margin_right = 864.0
-margin_bottom = 362.0
+margin_top = 378.0
+margin_right = 808.0
+margin_bottom = 382.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer"]
-margin_top = 366.0
-margin_right = 864.0
-margin_bottom = 528.0
+margin_top = 386.0
+margin_right = 808.0
+margin_bottom = 508.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer"]
-margin_right = 864.0
+margin_right = 808.0
 margin_bottom = 22.0
 custom_fonts/font = SubResource( 5 )
 text = "SKILLS"
@@ -1537,13 +1544,13 @@ valign = 1
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer"]
 margin_top = 26.0
-margin_right = 864.0
-margin_bottom = 162.0
+margin_right = 808.0
+margin_bottom = 122.0
 columns = 7
 
 [node name="CheckBox" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_right = 115.0
-margin_bottom = 24.0
+margin_right = 107.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1553,9 +1560,9 @@ text = "COLD_STEEL"
 align = 1
 
 [node name="CheckBox2" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 119.0
-margin_right = 215.0
-margin_bottom = 24.0
+margin_left = 111.0
+margin_right = 199.0
+margin_bottom = 16.0
 rect_pivot_offset = Vector2( -293.796, 285.048 )
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
@@ -1565,9 +1572,9 @@ text = "HANDGUNS"
 align = 1
 
 [node name="CheckBox3" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 219.0
-margin_right = 332.0
-margin_bottom = 24.0
+margin_left = 203.0
+margin_right = 308.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1576,9 +1583,9 @@ text = "MEDIUM_WEAPONS"
 align = 1
 
 [node name="CheckBox4" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 336.0
-margin_right = 467.0
-margin_bottom = 24.0
+margin_left = 312.0
+margin_right = 435.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1587,9 +1594,9 @@ text = "LONG_WEAPONS"
 align = 1
 
 [node name="CheckBox5" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 471.0
-margin_right = 579.0
-margin_bottom = 24.0
+margin_left = 439.0
+margin_right = 539.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1598,9 +1605,9 @@ text = "HEAVY_WEAPONS"
 align = 1
 
 [node name="CheckBox6" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 583.0
-margin_right = 759.0
-margin_bottom = 24.0
+margin_left = 543.0
+margin_right = 711.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1609,9 +1616,9 @@ text = "BREAK-INS"
 align = 1
 
 [node name="CheckBox7" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 763.0
-margin_right = 864.0
-margin_bottom = 24.0
+margin_left = 715.0
+margin_right = 808.0
+margin_bottom = 16.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1620,9 +1627,9 @@ text = "MARTIAL_ARTS"
 align = 1
 
 [node name="CheckBox8" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 28.0
-margin_right = 115.0
-margin_bottom = 52.0
+margin_top = 20.0
+margin_right = 107.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1631,10 +1638,10 @@ text = "ATTENTION/NOTICE"
 align = 1
 
 [node name="CheckBox9" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 119.0
-margin_top = 28.0
-margin_right = 215.0
-margin_bottom = 52.0
+margin_left = 111.0
+margin_top = 20.0
+margin_right = 199.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1643,10 +1650,10 @@ text = "FIGHT"
 align = 1
 
 [node name="CheckBox10" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 219.0
-margin_top = 28.0
-margin_right = 332.0
-margin_bottom = 52.0
+margin_left = 203.0
+margin_top = 20.0
+margin_right = 308.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1655,10 +1662,10 @@ text = "CREDIBILITY"
 align = 1
 
 [node name="CheckBox11" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 336.0
-margin_top = 28.0
-margin_right = 467.0
-margin_bottom = 52.0
+margin_left = 312.0
+margin_top = 20.0
+margin_right = 435.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1667,10 +1674,10 @@ text = "PERSONAL_CARES"
 align = 1
 
 [node name="CheckBox12" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 471.0
-margin_top = 28.0
-margin_right = 579.0
-margin_bottom = 52.0
+margin_left = 439.0
+margin_top = 20.0
+margin_right = 539.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1679,10 +1686,10 @@ text = "DISGUISE"
 align = 1
 
 [node name="CheckBox13" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 583.0
-margin_top = 28.0
-margin_right = 759.0
-margin_bottom = 52.0
+margin_left = 543.0
+margin_top = 20.0
+margin_right = 711.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1691,10 +1698,10 @@ text = "EDUCATION_AND_GENERAL_CULTURE"
 align = 1
 
 [node name="CheckBox14" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 763.0
-margin_top = 28.0
-margin_right = 864.0
-margin_bottom = 52.0
+margin_left = 715.0
+margin_top = 20.0
+margin_right = 808.0
+margin_bottom = 36.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1703,9 +1710,9 @@ text = "HIDE/EVADE"
 align = 1
 
 [node name="CheckBox15" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 56.0
-margin_right = 115.0
-margin_bottom = 80.0
+margin_top = 40.0
+margin_right = 107.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1714,10 +1721,10 @@ text = "DODGE/ESCAPE"
 align = 1
 
 [node name="CheckBox16" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 119.0
-margin_top = 56.0
-margin_right = 215.0
-margin_bottom = 80.0
+margin_left = 111.0
+margin_top = 40.0
+margin_right = 199.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1726,10 +1733,10 @@ text = "FALSIFICATION"
 align = 1
 
 [node name="CheckBox17" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 219.0
-margin_top = 56.0
-margin_right = 332.0
-margin_bottom = 80.0
+margin_left = 203.0
+margin_top = 40.0
+margin_right = 308.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1738,10 +1745,10 @@ text = "STEALTH"
 align = 1
 
 [node name="CheckBox18" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 336.0
-margin_top = 56.0
-margin_right = 467.0
-margin_bottom = 80.0
+margin_left = 312.0
+margin_top = 40.0
+margin_right = 435.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1750,10 +1757,10 @@ text = "QUESTIONING"
 align = 1
 
 [node name="CheckBox19" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 471.0
-margin_top = 56.0
-margin_right = 579.0
-margin_bottom = 80.0
+margin_left = 439.0
+margin_top = 40.0
+margin_right = 539.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1762,10 +1769,10 @@ text = "BULLYING"
 align = 1
 
 [node name="CheckBox20" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 583.0
-margin_top = 56.0
-margin_right = 759.0
-margin_bottom = 80.0
+margin_left = 543.0
+margin_top = 40.0
+margin_right = 711.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1774,10 +1781,10 @@ text = "LEADERSHIP"
 align = 1
 
 [node name="CheckBox21" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 763.0
-margin_top = 56.0
-margin_right = 864.0
-margin_bottom = 80.0
+margin_left = 715.0
+margin_top = 40.0
+margin_right = 808.0
+margin_bottom = 56.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1786,9 +1793,9 @@ text = "MEDICINES"
 align = 1
 
 [node name="CheckBox22" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 84.0
-margin_right = 115.0
-margin_bottom = 108.0
+margin_top = 60.0
+margin_right = 107.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1797,10 +1804,10 @@ text = "MEDICINE"
 align = 1
 
 [node name="CheckBox23" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 119.0
-margin_top = 84.0
-margin_right = 215.0
-margin_bottom = 108.0
+margin_left = 111.0
+margin_top = 60.0
+margin_right = 199.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1809,10 +1816,10 @@ text = "NEGOTIATE"
 align = 1
 
 [node name="CheckBox24" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 219.0
-margin_top = 84.0
-margin_right = 332.0
-margin_bottom = 108.0
+margin_left = 203.0
+margin_top = 60.0
+margin_right = 308.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1821,10 +1828,10 @@ text = "PERCEPTION"
 align = 1
 
 [node name="CheckBox25" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 336.0
-margin_top = 84.0
-margin_right = 467.0
-margin_bottom = 108.0
+margin_left = 312.0
+margin_top = 60.0
+margin_right = 435.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1833,10 +1840,10 @@ text = "PERSUASION_AND_LABIA"
 align = 1
 
 [node name="CheckBox26" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 471.0
-margin_top = 84.0
-margin_right = 579.0
-margin_bottom = 108.0
+margin_left = 439.0
+margin_top = 60.0
+margin_right = 539.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1845,10 +1852,10 @@ text = "FIRST_AID"
 align = 1
 
 [node name="CheckBox27" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 583.0
-margin_top = 84.0
-margin_right = 759.0
-margin_bottom = 108.0
+margin_left = 543.0
+margin_top = 60.0
+margin_right = 711.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1857,10 +1864,10 @@ text = "TORTURE/DRUG_RESISTANCE"
 align = 1
 
 [node name="CheckBox28" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 763.0
-margin_top = 84.0
-margin_right = 864.0
-margin_bottom = 108.0
+margin_left = 715.0
+margin_top = 60.0
+margin_right = 808.0
+margin_bottom = 76.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1869,9 +1876,9 @@ text = "RESISTANCE"
 align = 1
 
 [node name="CheckBox29" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_top = 112.0
-margin_right = 115.0
-margin_bottom = 136.0
+margin_top = 80.0
+margin_right = 107.0
+margin_bottom = 96.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1880,10 +1887,10 @@ text = "SEDUCTION"
 align = 1
 
 [node name="CheckBox30" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 119.0
-margin_top = 112.0
-margin_right = 215.0
-margin_bottom = 136.0
+margin_left = 111.0
+margin_top = 80.0
+margin_right = 199.0
+margin_bottom = 96.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1892,10 +1899,10 @@ text = "SURVIVAL"
 align = 1
 
 [node name="CheckBox31" type="CheckBox" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer/VBoxContainer/VBoxContainer/GridContainer"]
-margin_left = 219.0
-margin_top = 112.0
-margin_right = 332.0
-margin_bottom = 136.0
+margin_left = 203.0
+margin_top = 80.0
+margin_right = 308.0
+margin_bottom = 96.0
 custom_styles/disabled = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
 custom_constants/hseparation = 21
@@ -1904,13 +1911,13 @@ text = "TRACKING"
 align = 1
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_left = 884.0
-margin_right = 888.0
+margin_left = 828.0
+margin_right = 832.0
 margin_bottom = 528.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/SHEET_VISUALIZER/HBoxContainer"]
-margin_left = 908.0
-margin_right = 1008.0
+margin_left = 852.0
+margin_right = 952.0
 margin_bottom = 528.0
 alignment = 1
 
@@ -1940,6 +1947,8 @@ text = "Grimory"
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 2 )
 window_title = "Open a File"
 dialog_text = "Selecione o perfil que voce deseja caregar"

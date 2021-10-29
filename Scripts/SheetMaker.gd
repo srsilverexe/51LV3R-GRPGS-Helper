@@ -233,7 +233,7 @@ func _sync_lines():
 func _on_Button_button_down():
 	_sync_vars()
 	
-	if avaliable_points == 0 and avaliable_skills == 0: 
+	if avaliable_points == 0 and avaliable_skills == 0 and temp_sheet["name"] != "" and temp_sheet["race"] != "" and temp_sheet["class"] != "":
 		if tempSheetPath != null:
 			SaveSistem.save_data(tempSheetPath, temp_sheet)
 		else:
