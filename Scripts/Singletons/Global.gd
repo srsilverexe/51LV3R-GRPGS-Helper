@@ -5,7 +5,6 @@ var settings = {
 	"auto_save": true,
 	"auto_save_frequency": 0,
 	"dices_log_files": true,
-	"max_log_files": 1,
 	"theme": "dark",
 }
 
@@ -93,7 +92,6 @@ func _init():
 	var dir = Directory.new()
 	dir.open("user://")
 	dir.make_dir("sheets")
-	dir.make_dir("dices")
 
 func _ready():
 	var f = File.new()
