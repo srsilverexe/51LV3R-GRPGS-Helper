@@ -1,5 +1,7 @@
 # 51LV3R-GRPGS-Helper
 
+<img src="https://img.shields.io/github/license/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper" /> <img src="https://img.shields.io/github/repo-size/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper" /> <img src="https://img.shields.io/github/v/release/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper" /> <img src="https://img.shields.io/tokei/lines/github/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper" />  <img src="https://img.shields.io/github/stars/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper?style=social" /> 
+
 📖 Project status: in development ✔️
 
 💬 Suport: Discord: Sr.エドワード (Sr.51LV3R)#9019 🔮
