@@ -29,3 +29,8 @@ func _on_ButtonConfigs_button_down():
 func _on_ButtonQuit_button_down():
 	get_tree().quit()
 	pass 
+
+
+func _on_RichTextLabel_meta_clicked(meta):
+	OS.shell_open(meta)
+	pass # Replace with function body.

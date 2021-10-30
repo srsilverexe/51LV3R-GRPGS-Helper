@@ -143,15 +143,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -128.0
-margin_top = -30.0
-margin_right = -9.0
-margin_bottom = -8.0
+margin_left = -195.449
+margin_top = -29.2908
+margin_right = -9.44946
+margin_bottom = 10.7092
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+margin_right = 70.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 70, 22 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[url=https://github.com/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper]Github[/url]"
+text = "Github"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_left = 74.0
+margin_right = 186.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
 custom_fonts/font = SubResource( 2 )
 text = "Version: 1.3.1"
 align = 2
@@ -164,3 +187,4 @@ __meta__ = {
 [connection signal="button_down" from="Panel/VBoxContainer/ButtonDices" to="." method="_on_ButtonDices_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/ButtonConfigs" to="." method="_on_ButtonConfigs_button_down"]
 [connection signal="button_down" from="Panel/VBoxContainer/ButtonQuit" to="." method="_on_ButtonQuit_button_down"]
+[connection signal="meta_clicked" from="HBoxContainer/RichTextLabel" to="." method="_on_RichTextLabel_meta_clicked"]
