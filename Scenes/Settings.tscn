@@ -33,9 +33,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -362.0
+margin_left = -404.5
 margin_top = -129.0
-margin_right = 362.0
+margin_right = 404.5
 margin_bottom = 129.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12
@@ -73,13 +73,13 @@ selected = 0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/GridContainer"]
 margin_left = 217.0
-margin_right = 508.0
+margin_right = 593.0
 margin_bottom = 102.0
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/GridContainer/VBoxContainer2"]
 margin_top = 22.0
-margin_right = 291.0
+margin_right = 376.0
 margin_bottom = 44.0
 custom_fonts/font = SubResource( 1 )
 text = "Theme"
@@ -88,7 +88,7 @@ valign = 1
 
 [node name="OptionButton" type="OptionButton" parent="Panel/GridContainer/VBoxContainer2"]
 margin_top = 48.0
-margin_right = 291.0
+margin_right = 376.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = SubResource( 1 )
@@ -98,8 +98,8 @@ items = [ "Dark", null, false, 0, null, "Light (Alpha)", null, false, 1, null ]
 selected = 0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Panel/GridContainer"]
-margin_left = 520.0
-margin_right = 724.0
+margin_left = 605.0
+margin_right = 809.0
 margin_bottom = 102.0
 alignment = 1
 
@@ -135,13 +135,13 @@ placeholder_text = "0"
 [node name="VBoxContainer4" type="VBoxContainer" parent="Panel/GridContainer"]
 margin_top = 114.0
 margin_right = 205.0
-margin_bottom = 232.0
+margin_bottom = 216.0
 alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="Panel/GridContainer/VBoxContainer4"]
-margin_top = 43.0
+margin_top = 35.0
 margin_right = 205.0
-margin_bottom = 75.0
+margin_bottom = 67.0
 custom_fonts/font = SubResource( 1 )
 text = "Dices Log Files"
 align = 1
@@ -149,30 +149,34 @@ align = 1
 [node name="VBoxContainer5" type="VBoxContainer" parent="Panel/GridContainer"]
 margin_left = 217.0
 margin_top = 114.0
-margin_right = 508.0
-margin_bottom = 232.0
+margin_right = 593.0
+margin_bottom = 216.0
+alignment = 1
 
 [node name="CheckButton" type="CheckButton" parent="Panel/GridContainer/VBoxContainer5"]
-margin_right = 291.0
+margin_right = 376.0
 margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
 text = "Dices Log Auto Clear"
 align = 1
 
 [node name="HSeparator" type="HSeparator" parent="Panel/GridContainer/VBoxContainer5"]
 margin_top = 36.0
-margin_right = 291.0
+margin_right = 376.0
 margin_bottom = 40.0
 
 [node name="Label" type="Label" parent="Panel/GridContainer/VBoxContainer5"]
 margin_top = 44.0
-margin_right = 291.0
-margin_bottom = 74.0
+margin_right = 376.0
+margin_bottom = 66.0
+custom_fonts/font = SubResource( 1 )
 text = "Dices Log Auto Clear Frequency in days"
 
 [node name="LineEdit" type="LineEdit" parent="Panel/GridContainer/VBoxContainer5"]
-margin_top = 78.0
-margin_right = 291.0
-margin_bottom = 118.0
+margin_top = 70.0
+margin_right = 376.0
+margin_bottom = 102.0
+custom_fonts/font = SubResource( 1 )
 align = 1
 editable = false
 placeholder_text = "0"

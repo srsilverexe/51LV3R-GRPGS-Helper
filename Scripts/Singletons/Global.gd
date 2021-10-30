@@ -2,10 +2,12 @@ extends Node
 
 var settings = {
 	"language": "en",
+	"theme": "dark",
 	"auto_save": true,
 	"auto_save_frequency": 0,
 	"dices_log_files": true,
-	"theme": "dark",
+	"dices_log_auto_clear": false,
+	"dices_log_auto_clear_frequency": 0,
 }
 
 var curentSheet = {
@@ -94,10 +96,16 @@ func _init():
 	dir.make_dir("sheets")
 
 func _ready():
+	if settings["dices_log_auto_clear"]:
+		_dices_log_auto_cleaner()
+	
 	var f = File.new()
 	if f.file_exists("user://settings.cfg"):
 		if SaveSistem.load_data("user://settings.cfg") != {}:
-			settings = SaveSistem.load_data("user://settings.cfg")
+			var a = SaveSistem.load_data("user://settings.cfg")
+			for i in settings:
+				if i in a:
+					settings[i] = a[i]
 
 # warning-ignore:unused_argument
 func _process(delta):
@@ -115,3 +123,28 @@ func _input(event):
 		f.popup_centered()
 		f.popup()
 	pass
+
+func _dices_log_auto_cleaner():
+	for i in SaveSistem.scan_folder("user://logs/"):
+		if i == "DicesLog.log":
+			var f = File.new()
+			
+			var lmt = OS.get_datetime_from_unix_time(f.get_modified_time("user://logs/DicesLog.log"))
+			var at = OS.get_date()
+			
+			var tlmt = 0
+			var tat = 0
+			
+			tlmt = lmt["day"] + (30 * lmt["month"]) + (365 * lmt["year"])
+			print(tlmt)
+			tat = at["day"] + (30 * at["month"]) + (365 * at["year"])
+			print(tat)
+			
+			if tlmt != tat:
+				var td = tat - tlmt
+				
+				if td >= settings["dice_log_auto_clear_frequency"]:
+					var d = Directory.new()
+					
+					d.remove("user://logs/DicesLog.log")
+			
