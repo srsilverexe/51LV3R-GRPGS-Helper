@@ -85,7 +85,7 @@ func _roll():
 	
 	
 	if Global.settings["dices_log_files"]:
-		SaveSistem.log_saver("user://logs/DicesLog.log", "D" + String(dice) + " " + String(results) + " ")
+		SaveSistem.log_saver("user://logs/DicesLog.log", "D" + String(dice) + " " + String(results) + ".documentation")
 	
 
 

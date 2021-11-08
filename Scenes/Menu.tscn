@@ -148,31 +148,31 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -195.449
-margin_top = -29.2908
-margin_right = -9.44946
-margin_bottom = 10.7092
+margin_left = -236.0
+margin_top = -30.0
+margin_right = -10.0
+margin_bottom = 10.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
-margin_right = 70.0
+margin_right = 110.0
 margin_bottom = 40.0
-rect_min_size = Vector2( 70, 22 )
+rect_min_size = Vector2( 110, 22 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[url=https://github.com/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper]Github[/url]"
-text = "Github"
+bbcode_text = "[url=https://drive.google.com/file/d/1wy6BordP84vrYt_zbrG_I_q0IdoUEWxw/view?usp=sharing]5GC[/url] [url=https://github.com/Eduardo-de-Oliveira-Santos/51LV3R-GRPGS-Helper]Github[/url] "
+text = "5GC Github "
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-margin_left = 74.0
-margin_right = 186.0
+margin_left = 114.0
+margin_right = 226.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 0, 40 )
 custom_fonts/font = SubResource( 2 )

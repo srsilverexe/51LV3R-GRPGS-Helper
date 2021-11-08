@@ -34,6 +34,7 @@ __meta__ = {
 }
 
 [node name="DAMAGE" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -55,7 +56,6 @@ __meta__ = {
 }
 
 [node name="MELEE" type="Tabs" parent="TabContainer/DAMAGE/TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -347,6 +347,7 @@ align = 1
 valign = 1
 
 [node name="SPECIAL" type="Tabs" parent="TabContainer/DAMAGE/TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -477,7 +478,6 @@ text = "000"
 align = 1
 
 [node name="STATUS" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 10.0
@@ -798,6 +798,29 @@ custom_fonts/font = ExtResource( 1 )
 text = "000"
 align = 1
 valign = 1
+
+[node name="Others" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 41.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="TabContainer" type="TabContainer" parent="TabContainer/Others"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -511.0
+margin_top = -283.0
+margin_right = 511.0
+margin_bottom = 283.0
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton" type="TextureButton" parent="."]
 anchor_left = 0.942

@@ -1,19 +1,22 @@
 extends Control
 
-var index_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer/VBoxContainer"
-var name_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer2/VBoxContainer"
-var base_damage_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer3/VBoxContainer"
-var base_defense_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer4/VBoxContainer"
-var requirements_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer5/VBoxContainer"
-var durability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer6/VBoxContainer"
-var rarity_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer7/VBoxContainer"
-var ability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer8/VBoxContainer"
+var icon_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer/VBoxContainer"
+var index_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer2/VBoxContainer"
+var name_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer3/VBoxContainer"
+var base_damage_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer4/VBoxContainer"
+var base_defense_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer5/VBoxContainer"
+var requirements_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer6/VBoxContainer"
+var durability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer7/VBoxContainer"
+var rarity_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer8/VBoxContainer"
+var ability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer9/VBoxContainer"
 
-var f = [index_line, name_line, base_damage_line, base_defense_line, requirements_line, durability_line, rarity_line, ability_line]
+var f = [icon_line, index_line, name_line, base_damage_line, base_defense_line, requirements_line, durability_line, rarity_line, ability_line]
 
 var s = true
 
 func _ready():
+	_update_icons()
+	
 	if Global.settings["theme"] == "dark":
 		$FileDialog.theme = Global.darkTheme
 	elif Global.settings["theme"] == "light":
@@ -29,10 +32,10 @@ func _ready():
 # warning-ignore:unused_argument
 func _process(delta):
 	if Global.curentSheetPath != null:
-		if Global.setings["auto_save"]:
+		if Global.settings["auto_save"]:
 			if s:
 				s = false
-				$Timer.start(Global.setings["auto_save_frequency"])
+				$Timer.start(Global.settings["auto_save_frequency"])
 			
 	if $AcceptDialog.visible:
 		if $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text == "" \
@@ -71,6 +74,7 @@ func _update_inventory():
 	if Global.curentSheet != null:
 		for i in Global.curentSheet["index"].size():
 			var index_label = Label.new()
+			var icon_texture = TextureRect.new()
 			var name_label = Label.new()
 			var base_damage_label = Label.new()
 			var base_defense_label = Label.new()
@@ -80,6 +84,7 @@ func _update_inventory():
 			var ability_label = Label.new()
 			var labels = [index_label, name_label, base_damage_label, base_defense_label, requirements_label, durability_label, rarity_label, ability_label]
 			index_label.text = Global.curentSheet["index"][i]
+			icon_texture.texture = load(Global.curentSheet["icon"][i])
 			name_label.text = Global.curentSheet["names"][i]
 			base_damage_label.text = Global.curentSheet["base_damage"][i]
 			base_defense_label.text = Global.curentSheet["base_defense"][i]
@@ -91,6 +96,7 @@ func _update_inventory():
 				l.align = 1
 				l.valign = 1
 			get_node(index_line).add_child(index_label, true)
+			get_node(icon_line).add_child(icon_texture, true)
 			get_node(name_line).add_child(name_label, true)
 			get_node(base_damage_line).add_child(base_damage_label, true)
 			get_node(base_defense_line).add_child(base_defense_label, true)
@@ -125,6 +131,7 @@ func _clear_edit_line():
 
 func _print_inventory():
 	print("Index: " + String(Global.curentSheet["index"]))
+	print("Icon: " + String(Global.curentSheet["icon"]))
 	print("Names: " + String(Global.curentSheet["names"]))
 	print("Base Damage: " + String(Global.curentSheet["base_damage"]))
 	print("Base Defense: " + String(Global.curentSheet["base_defense"]))
@@ -135,6 +142,7 @@ func _print_inventory():
 
 func _add_itens():
 	Global.curentSheet["index"].insert(Global.curentSheet["index"].size(), String(Global.curentSheet["index"].size()))
+	Global.curentSheet["icon"].insert(Global.curentSheet["icon"].size(), String($AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer/TextureRect.iconPath))
 	Global.curentSheet["names"].insert(Global.curentSheet["names"].size(), $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text)
 	Global.curentSheet["base_damage"].insert(Global.curentSheet["base_damage"].size(), String(int($AcceptDialog/ScrollContainer/VBoxContainer/LineEdit2.text)))
 	Global.curentSheet["base_defense"].insert(Global.curentSheet["base_defense"].size(), String(int($AcceptDialog/ScrollContainer/VBoxContainer/LineEdit3.text)))
@@ -148,6 +156,7 @@ func _add_itens():
 
 func _remove_itens():
 	if Global.curentSheet["index"].has(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))):
+		Global.curentSheet["icon"].remove(Global.curentSheet["index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["names"].remove(Global.curentSheet["index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["base_damage"].remove(Global.curentSheet["index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["base_defense"].remove(Global.curentSheet["index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
@@ -183,6 +192,25 @@ func _edit_itens():
 	_clear_edit_line()
 	_update_inventory()
 	_print_inventory()
+
+func _update_icons():
+	for i in Lists.icons:
+		var a = TextureButton.new()
+		var b = load(i)
+		
+		a.texture_normal = b
+		
+		a.connect("button_down", self, "_set_icon_path" , [i])
+		
+		$AcceptDialog5/ScrollContainer/GridContainer.add_child(a)
+
+func _set_icon_path(path):
+	yield($AcceptDialog5, "confirmed")
+	$AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer/TextureRect.iconPath = path
+
+func _on_Add_icon_Button_button_down():
+	$AcceptDialog5.popup_centered()
+	pass # Replace with function body.
 
 func _on_Button_button_down():
 	$AcceptDialog.popup_centered()
@@ -237,7 +265,7 @@ func _on_FileDialog_file_selected(path):
 
 func _on_Timer_timeout():
 	if Global.curentSheetPath != null:
-		if Global.setings["auto_save"]:
+		if Global.settings["auto_save"]:
 			if s:
 				s = false
 				$Timer.start(Global.setings["auto_save_frequency"])

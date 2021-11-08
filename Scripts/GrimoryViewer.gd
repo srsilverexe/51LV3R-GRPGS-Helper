@@ -1,17 +1,20 @@
 extends Control
 
-var index_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer/VBoxContainer"
-var name_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer2/VBoxContainer"
-var requirements_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer3/VBoxContainer"
-var ability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer4/VBoxContainer"
-var cost_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer5/VBoxContainer"
-var min_level_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer6/VBoxContainer"
+var icon_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer/VBoxContainer"
+var index_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer2/VBoxContainer"
+var name_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer3/VBoxContainer"
+var requirements_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer4/VBoxContainer"
+var ability_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer5/VBoxContainer"
+var cost_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer6/VBoxContainer"
+var min_level_line = "Panel/ScrollContainer/HBoxContainer/VBoxContainer7/VBoxContainer"
 
-var f = [index_line, name_line, requirements_line, ability_line, cost_line, min_level_line]
+var f = [icon_line, index_line, name_line, requirements_line, ability_line, cost_line, min_level_line]
 
 var s = true
 
 func _ready():
+	_update_icons()
+	
 	if Global.settings["theme"] == "dark":
 		$FileDialog.theme = Global.darkTheme
 	elif Global.settings["theme"] == "light":
@@ -29,10 +32,10 @@ func _ready():
 # warning-ignore:unused_argument
 func _process(delta):
 	if Global.curentSheetPath != null:
-		if Global.setings["auto_save"]:
+		if Global.settings["auto_save"]:
 			if s:
 				s = false
-				$Timer.start(Global.setings["auto_save_frequency"])
+				$Timer.start(Global.settings["auto_save_frequency"])
 	
 	
 	if $AcceptDialog.visible:
@@ -70,6 +73,7 @@ func _update_grimory():
 	if Global.curentSheet != null:
 		for i in Global.curentSheet["g_index"].size():
 			var index_label = Label.new()
+			var icon_texture = TextureRect.new()
 			var name_label = Label.new()
 			var requirements_label = Label.new()
 			var ability_label = Label.new()
@@ -77,6 +81,7 @@ func _update_grimory():
 			var min_level_label = Label.new()
 			var labels = [index_label, name_label, requirements_label, ability_label, cost_label, min_level_label]
 			index_label.text = Global.curentSheet["g_index"][i]
+			icon_texture.texture = load(Global.curentSheet["g_icon"][i])
 			name_label.text = Global.curentSheet["g_names"][i]
 			requirements_label.text = Global.curentSheet["g_requirements"][i]
 			ability_label.text = Global.curentSheet["g_ability"][i]
@@ -86,6 +91,7 @@ func _update_grimory():
 				l.align = 1
 				l.valign = 1
 			get_node(index_line).add_child(index_label, true)
+			get_node(icon_line).add_child(icon_texture, true)
 			get_node(name_line).add_child(name_label, true)
 			get_node(requirements_line).add_child(requirements_label, true)
 			get_node(ability_line).add_child(ability_label, true)
@@ -125,6 +131,7 @@ func _print_grimory():
 
 func _add_abiliity():
 	Global.curentSheet["g_index"].insert(Global.curentSheet["g_index"].size(), String(Global.curentSheet["g_index"].size()))
+	Global.curentSheet["g_icon"].insert(Global.curentSheet["g_icon"].size(), String($AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer/TextureRect.iconPath))
 	Global.curentSheet["g_names"].insert(Global.curentSheet["g_names"].size(), $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit.text)
 	Global.curentSheet["g_requirements"].insert(Global.curentSheet["g_requirements"].size(), $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit2.text)
 	Global.curentSheet["g_ability"].insert(Global.curentSheet["g_ability"].size(), $AcceptDialog/ScrollContainer/VBoxContainer/LineEdit3.text)
@@ -137,6 +144,7 @@ func _add_abiliity():
 
 func _remove_abiliity():
 	if Global.curentSheet["g_index"].has(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))):
+		Global.curentSheet["g_icon"].remove(Global.curentSheet["g_index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["g_names"].remove(Global.curentSheet["g_index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["g_requirements"].remove(Global.curentSheet["g_index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
 		Global.curentSheet["g_ability"].remove(Global.curentSheet["g_index"].find(String(int($AcceptDialog2/VBoxContainer/LineEdit.text))))
@@ -185,6 +193,20 @@ func _use_abiliity():
 	if OS.is_debug_build():
 		_print_grimory()
 
+func _update_icons():
+	for i in Lists.icons:
+		var a = TextureButton.new()
+		var b = load(i)
+		
+		a.texture_normal = b
+		
+		a.connect("button_down", self, "_set_icon_path" , [i])
+		
+		$AcceptDialog5/ScrollContainer/GridContainer.add_child(a)
+
+func _set_icon_path(path):
+	yield($AcceptDialog5, "confirmed")
+	$AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer/TextureRect.iconPath = path
 
 func _on_Button_button_down():
 	$AcceptDialog.popup_centered()
@@ -254,6 +276,10 @@ func _on_Timer_timeout():
 	SaveSistem.save_data(Global.curentSheetPath, Global.curentSheet)
 	print("Saved")
 	if Global.curentSheetPath != null:
-		if Global.setings["auto_save"]:
-			$Timer.start(Global.setings["auto_save_frequency"])
+		if Global.settings["auto_save"]:
+			$Timer.start(Global.settings["auto_save_frequency"])
+	pass # Replace with function body.
+
+func _on_Add_icon_Button_button_down():
+	$AcceptDialog5.popup_centered()
 	pass # Replace with function body.

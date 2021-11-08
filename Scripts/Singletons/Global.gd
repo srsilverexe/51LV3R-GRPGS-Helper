@@ -66,6 +66,7 @@ var curentSheet = {
 	"tracking": false,
 	#Inventory
 	"index": [],
+	"icon": [],
 	"names": [],
 	"base_damage": [],
 	"base_defense": [],
@@ -75,6 +76,7 @@ var curentSheet = {
 	"ability": [],
 	#Grimory
 	"g_index": [],
+	"g_icon": [],
 	"g_names": [],
 	"g_ability": [],
 	"g_requirements": [],

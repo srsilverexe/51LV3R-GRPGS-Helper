@@ -30,6 +30,14 @@ func log_saver(path:String, info:String):
 		f.store_line(log_line)
 		f.close()
 
+func doc_loader(path: String):
+	var f = File.new()
+	var doc
+	if f.open(path, File.READ) == OK:
+		doc = f.get_as_text()
+	f.close()
+	return doc
+
 func scan_folder(path:String = ""):
 	var f = Directory.new()
 	var list = []
@@ -45,7 +53,6 @@ func scan_folder(path:String = ""):
 			l = f.get_next()
 	else:
 		printerr("no archives in folder")
-	
 	return list
 
 

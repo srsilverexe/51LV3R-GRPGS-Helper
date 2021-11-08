@@ -1,9 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Fonts/Normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/GrimoryViewer.gd" type="Script" id=2]
 [ext_resource path="res://Themes/Dark.theme" type="Theme" id=3]
 [ext_resource path="res://Assets/Icons/ReturnIcon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/SelectableIcons/50x50/big-egg_50X50.png" type="Texture" id=5]
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends TextureRect
+
+var iconPath = \"res://Assets/SelectableIcons/50x50/big-egg_50X50.png\"
+
+func _process(delta):
+	var icon = load(iconPath)
+	texture = icon
+"
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends AcceptDialog
@@ -43,9 +54,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -412.0
+margin_left = -505.0
 margin_top = -291.0
-margin_right = 338.0
+margin_right = 371.0
 margin_bottom = 291.0
 rect_min_size = Vector2( 750, 0 )
 __meta__ = {
@@ -63,34 +74,34 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 104.0
-margin_right = 140.0
+margin_left = 65.0
+margin_right = 98.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer"]
-margin_right = 36.0
+margin_right = 33.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 1 )
-text = "INDEX"
+text = "Icon"
 align = 1
 valign = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer"]
 margin_top = 34.0
-margin_right = 36.0
+margin_right = 33.0
 margin_bottom = 34.0
 
 [node name="VSeparator" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 160.0
-margin_right = 164.0
+margin_left = 118.0
+margin_right = 122.0
 margin_bottom = 34.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 184.0
-margin_right = 220.0
+margin_left = 142.0
+margin_right = 178.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -100,7 +111,7 @@ __meta__ = {
 margin_right = 36.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 1 )
-text = "NAME"
+text = "INDEX"
 align = 1
 valign = 1
 
@@ -110,13 +121,39 @@ margin_right = 36.0
 margin_bottom = 34.0
 
 [node name="VSeparator2" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 240.0
-margin_right = 244.0
+margin_left = 198.0
+margin_right = 202.0
+margin_bottom = 34.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 222.0
+margin_right = 258.0
+margin_bottom = 34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer4"]
+margin_right = 36.0
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 1 )
+text = "NAME"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer4"]
+margin_top = 34.0
+margin_right = 36.0
+margin_bottom = 34.0
+
+[node name="VSeparator3" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 278.0
+margin_right = 282.0
 margin_bottom = 34.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 264.0
-margin_right = 362.0
+margin_left = 302.0
+margin_right = 400.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -135,20 +172,20 @@ margin_top = 34.0
 margin_right = 98.0
 margin_bottom = 34.0
 
-[node name="VSeparator3" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 382.0
-margin_right = 386.0
+[node name="VSeparator4" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 420.0
+margin_right = 424.0
 margin_bottom = 34.0
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 406.0
-margin_right = 453.0
+[node name="VBoxContainer5" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 444.0
+margin_right = 491.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer4"]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer5"]
 margin_right = 47.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 1 )
@@ -156,25 +193,25 @@ text = "ABILITY"
 align = 1
 valign = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer4"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer5"]
 margin_top = 34.0
 margin_right = 47.0
 margin_bottom = 34.0
 
-[node name="VSeparator4" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 473.0
-margin_right = 477.0
+[node name="VSeparator5" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 511.0
+margin_right = 515.0
 margin_bottom = 34.0
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 497.0
-margin_right = 535.0
+[node name="VBoxContainer6" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 535.0
+margin_right = 573.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer5"]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer6"]
 margin_right = 38.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 1 )
@@ -182,25 +219,25 @@ text = "COST"
 align = 1
 valign = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer5"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer6"]
 margin_top = 34.0
 margin_right = 38.0
 margin_bottom = 34.0
 
-[node name="VSeparator5" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 555.0
-margin_right = 559.0
+[node name="VSeparator6" type="VSeparator" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 593.0
+margin_right = 597.0
 margin_bottom = 34.0
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
-margin_left = 579.0
-margin_right = 646.0
+[node name="VBoxContainer7" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer"]
+margin_left = 617.0
+margin_right = 684.0
 margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer6"]
+[node name="Label" type="Label" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer7"]
 margin_right = 67.0
 margin_bottom = 30.0
 custom_fonts/font = ExtResource( 1 )
@@ -208,7 +245,7 @@ text = "MIN_LEVEL"
 align = 1
 valign = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer6"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer/HBoxContainer/VBoxContainer7"]
 margin_top = 34.0
 margin_right = 67.0
 margin_bottom = 34.0
@@ -312,11 +349,43 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="AcceptDialog/ScrollContainer"]
 margin_right = 200.0
-margin_bottom = 386.0
+margin_bottom = 574.0
 
 [node name="Label" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
 margin_right = 200.0
 margin_bottom = 30.0
+rect_min_size = Vector2( 200, 0 )
+custom_fonts/font = ExtResource( 1 )
+text = "icon"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 184.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer"]
+margin_left = 13.0
+margin_right = 163.0
+margin_bottom = 150.0
+rect_min_size = Vector2( 150, 150 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 1
+script = SubResource( 5 )
+
+[node name="Button" type="Button" parent="AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer"]
+margin_left = 167.0
+margin_right = 187.0
+margin_bottom = 150.0
+text = "\\/"
+
+[node name="Label2" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 188.0
+margin_right = 200.0
+margin_bottom = 218.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "name"
@@ -324,16 +393,16 @@ align = 1
 valign = 1
 
 [node name="LineEdit" type="LineEdit" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 34.0
+margin_top = 222.0
 margin_right = 200.0
-margin_bottom = 74.0
+margin_bottom = 262.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 
-[node name="Label2" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 78.0
+[node name="Label3" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 266.0
 margin_right = 200.0
-margin_bottom = 108.0
+margin_bottom = 296.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "REQUIREMENTS"
@@ -341,16 +410,16 @@ align = 1
 valign = 1
 
 [node name="LineEdit2" type="LineEdit" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 112.0
+margin_top = 300.0
 margin_right = 200.0
-margin_bottom = 152.0
+margin_bottom = 340.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 
-[node name="Label3" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 156.0
+[node name="Label4" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 344.0
 margin_right = 200.0
-margin_bottom = 186.0
+margin_bottom = 374.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "ABILITY"
@@ -358,16 +427,16 @@ align = 1
 valign = 1
 
 [node name="LineEdit3" type="LineEdit" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 190.0
+margin_top = 378.0
 margin_right = 200.0
-margin_bottom = 230.0
+margin_bottom = 418.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 
-[node name="Label4" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 234.0
+[node name="Label5" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 422.0
 margin_right = 200.0
-margin_bottom = 264.0
+margin_bottom = 452.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "COST"
@@ -375,16 +444,16 @@ align = 1
 valign = 1
 
 [node name="LineEdit4" type="LineEdit" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 268.0
+margin_top = 456.0
 margin_right = 200.0
-margin_bottom = 308.0
+margin_bottom = 496.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 
-[node name="Label5" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 312.0
+[node name="Label6" type="Label" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
+margin_top = 500.0
 margin_right = 200.0
-margin_bottom = 342.0
+margin_bottom = 530.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 text = "MIN_LEVEL"
@@ -392,9 +461,9 @@ align = 1
 valign = 1
 
 [node name="LineEdit5" type="LineEdit" parent="AcceptDialog/ScrollContainer/VBoxContainer"]
-margin_top = 346.0
+margin_top = 534.0
 margin_right = 200.0
-margin_bottom = 386.0
+margin_bottom = 574.0
 rect_min_size = Vector2( 200, 0 )
 custom_fonts/font = ExtResource( 1 )
 
@@ -660,6 +729,36 @@ margin_bottom = 70.0
 rect_min_size = Vector2( 100, 0 )
 align = 1
 
+[node name="AcceptDialog5" type="AcceptDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.0
+margin_top = -175.0
+margin_right = 275.0
+margin_bottom = 175.0
+window_title = "Select a icon"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AcceptDialog5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -56.0
+rect_min_size = Vector2( 0, 50 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="AcceptDialog5/ScrollContainer"]
+columns = 11
+
 [node name="TextureButton" type="TextureButton" parent="."]
 anchor_left = 0.942
 anchor_right = 1.0
@@ -687,6 +786,7 @@ __meta__ = {
 [connection signal="button_down" from="VBoxContainer/Button4" to="." method="_on_Button4_button_down"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
 [connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="button_down" from="AcceptDialog/ScrollContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_Add_icon_Button_button_down"]
 [connection signal="confirmed" from="AcceptDialog2" to="." method="_on_AcceptDialog2_confirmed"]
 [connection signal="confirmed" from="AcceptDialog3" to="." method="_on_AcceptDialog3_confirmed"]
 [connection signal="confirmed" from="AcceptDialog4" to="." method="_on_AcceptDialog4_confirmed"]
